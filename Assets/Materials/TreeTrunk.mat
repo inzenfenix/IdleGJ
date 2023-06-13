@@ -32,7 +32,7 @@ Material:
     - _Lightning_Cutoff: 0
     - _Smoothness: 500
     m_Colors:
-    - _Diffuse_Color: {r: 0.4528302, g: 0.30372298, b: 0.083303675, a: 0}
+    - _Diffuse_Color: {r: 0.4056604, g: 0.2537038, b: 0.08993414, a: 0}
     - _Fresnel_Color: {r: 0.735849, g: 0.65931505, b: 0.3922214, a: 0}
     - _Specular_Color: {r: 0.2735849, g: 0.22287707, b: 0.10194909, a: 0}
   m_BuildTextureStacks: []

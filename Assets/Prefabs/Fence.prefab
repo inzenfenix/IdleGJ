@@ -71,10 +71,41 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 77a3a711f76d5e24c8a496d33b516aa1,
         type: 3}
       propertyPath: m_Name
-      value: Valla
+      value: Fence
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77a3a711f76d5e24c8a496d33b516aa1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2583506732085952330}
   m_SourcePrefab: {fileID: 100100000, guid: 77a3a711f76d5e24c8a496d33b516aa1, type: 3}
+--- !u!1 &2422746568121534919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 77a3a711f76d5e24c8a496d33b516aa1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3269115230195774614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &-2583506732085952330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2422746568121534919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.2000003, y: 0.29999998, z: 2.7}
+  m_Center: {x: 0, y: 0, z: 1.1999999}
