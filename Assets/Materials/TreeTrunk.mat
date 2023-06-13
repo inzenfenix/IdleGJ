@@ -26,14 +26,15 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Ambient_Strength: 0.1
-    - _Falloff_Amount: 0.1
-    - _Fresnel_Size: 0.1
+    - _Ambient_Strength: 0.9
+    - _Falloff_Amount: 0.12
+    - _Fresnel_Size: 0.35
     - _Lightning_Cutoff: 0
+    - _Smoothness: 500
     m_Colors:
-    - _Diffuse_Color: {r: 0.6132076, g: 0.4306868, b: 0.16487184, a: 0}
+    - _Diffuse_Color: {r: 0.4528302, g: 0.30372298, b: 0.083303675, a: 0}
     - _Fresnel_Color: {r: 0.735849, g: 0.65931505, b: 0.3922214, a: 0}
-    - _Specular_Color: {r: 0.6226415, g: 0.25376338, b: 0.249644, a: 0}
+    - _Specular_Color: {r: 0.2735849, g: 0.22287707, b: 0.10194909, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3069935744747276685
 MonoBehaviour:
