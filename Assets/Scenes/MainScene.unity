@@ -184,7 +184,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: cfbdb16b32f9acb4899c023b6d9707c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -506,7 +506,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_ColorTemperature: 6500
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -1098,12 +1098,12 @@ PrefabInstance:
     - target: {fileID: 6125594817508063821, guid: 1a39afbfaf43e3c4c8517070babc9d39,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.75
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 6125594817508063821, guid: 1a39afbfaf43e3c4c8517070babc9d39,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.04100001
+      value: 1.041
       objectReference: {fileID: 0}
     - target: {fileID: 6125594817508063821, guid: 1a39afbfaf43e3c4c8517070babc9d39,
         type: 3}
@@ -1145,6 +1145,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Acorn
       objectReference: {fileID: 0}
+    - target: {fileID: 8427001992123885232, guid: 1a39afbfaf43e3c4c8517070babc9d39,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a449d41e2741c8947be38990b076b472, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
