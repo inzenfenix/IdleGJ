@@ -2405,10 +2405,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1163.000244140625,
-            "y": 655.0000610351563,
-            "width": 134.0001220703125,
-            "height": 34.00006103515625
+            "x": -1169.0,
+            "y": 650.0000610351563,
+            "width": 134.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -4104,9 +4104,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -251.00003051757813,
-            "y": 777.9999389648438,
-            "width": 154.00006103515626,
+            "x": -272.0,
+            "y": 786.0,
+            "width": 154.0,
             "height": 34.0
         }
     },
@@ -5033,10 +5033,10 @@
     "m_Guid": {
         "m_GuidSerialized": "82879cd2-2cd9-4aeb-ac1c-21bccbf3c3d2"
     },
-    "m_Name": "Smoothnes",
+    "m_Name": "Smoothness",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Smoothnes",
-    "m_DefaultReferenceName": "_Smoothnes",
+    "m_RefNameGeneratedByDisplayName": "Smoothness",
+    "m_DefaultReferenceName": "_Smoothness",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -6275,8 +6275,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1815.9998779296875,
-            "y": 1303.0,
+            "x": -1388.9998779296875,
+            "y": 1313.0,
             "width": 208.0,
             "height": 302.0
         }
@@ -6518,7 +6518,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "ff141879ac1541b69ee3090524a91113",
     "m_Id": 0,
-    "m_DisplayName": "Smoothnes",
+    "m_DisplayName": "Smoothness",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
