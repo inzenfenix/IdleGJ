@@ -20,7 +20,10 @@ public class CameraBehaviour : MonoBehaviour
             //If we hit something with the ray, we take OUT the information on hit
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log(hit.transform.position);
+                if (hit.transform.gameObject.tag == "Interactable")
+                {
+                    EventManager.TriggerEvent("Clicked", hit.transform.name);
+                }
             }
         }
     }

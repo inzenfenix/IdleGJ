@@ -50,6 +50,54 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Keyboard"",
+            ""id"": ""f60ab293-54bb-4552-96a6-fafc3e72ce8e"",
+            ""actions"": [
+                {
+                    ""name"": ""A"",
+                    ""type"": ""Button"",
+                    ""id"": ""0d1a763d-8395-44eb-ac07-374785545208"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""D"",
+                    ""type"": ""Button"",
+                    ""id"": ""8fd7d6ee-c918-4318-93fd-9530c40b5016"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""98a1e130-1c2f-464a-bda5-bff27b6df569"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""A"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9014cdbd-42c4-4b27-b0db-b2a12117f25c"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""D"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -57,6 +105,10 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         // Mouse
         m_Mouse = asset.FindActionMap("Mouse", throwIfNotFound: true);
         m_Mouse_Click = m_Mouse.FindAction("Click", throwIfNotFound: true);
+        // Keyboard
+        m_Keyboard = asset.FindActionMap("Keyboard", throwIfNotFound: true);
+        m_Keyboard_A = m_Keyboard.FindAction("A", throwIfNotFound: true);
+        m_Keyboard_D = m_Keyboard.FindAction("D", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -160,8 +212,67 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         }
     }
     public MouseActions @Mouse => new MouseActions(this);
+
+    // Keyboard
+    private readonly InputActionMap m_Keyboard;
+    private List<IKeyboardActions> m_KeyboardActionsCallbackInterfaces = new List<IKeyboardActions>();
+    private readonly InputAction m_Keyboard_A;
+    private readonly InputAction m_Keyboard_D;
+    public struct KeyboardActions
+    {
+        private @InputController m_Wrapper;
+        public KeyboardActions(@InputController wrapper) { m_Wrapper = wrapper; }
+        public InputAction @A => m_Wrapper.m_Keyboard_A;
+        public InputAction @D => m_Wrapper.m_Keyboard_D;
+        public InputActionMap Get() { return m_Wrapper.m_Keyboard; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(KeyboardActions set) { return set.Get(); }
+        public void AddCallbacks(IKeyboardActions instance)
+        {
+            if (instance == null || m_Wrapper.m_KeyboardActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_KeyboardActionsCallbackInterfaces.Add(instance);
+            @A.started += instance.OnA;
+            @A.performed += instance.OnA;
+            @A.canceled += instance.OnA;
+            @D.started += instance.OnD;
+            @D.performed += instance.OnD;
+            @D.canceled += instance.OnD;
+        }
+
+        private void UnregisterCallbacks(IKeyboardActions instance)
+        {
+            @A.started -= instance.OnA;
+            @A.performed -= instance.OnA;
+            @A.canceled -= instance.OnA;
+            @D.started -= instance.OnD;
+            @D.performed -= instance.OnD;
+            @D.canceled -= instance.OnD;
+        }
+
+        public void RemoveCallbacks(IKeyboardActions instance)
+        {
+            if (m_Wrapper.m_KeyboardActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IKeyboardActions instance)
+        {
+            foreach (var item in m_Wrapper.m_KeyboardActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_KeyboardActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public KeyboardActions @Keyboard => new KeyboardActions(this);
     public interface IMouseActions
     {
         void OnClick(InputAction.CallbackContext context);
+    }
+    public interface IKeyboardActions
+    {
+        void OnA(InputAction.CallbackContext context);
+        void OnD(InputAction.CallbackContext context);
     }
 }

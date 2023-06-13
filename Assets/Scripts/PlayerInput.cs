@@ -48,4 +48,14 @@ public class PlayerInput : MonoBehaviour
         //We use the systems from controller to check if we triggered the left button of our mouse
         return controller.Mouse.Click.triggered;
     }
+
+    public bool GoLeft()
+    {
+        return controller.Keyboard.A.triggered;
+    }
+
+    public bool GoRight()
+    {
+        return controller.Keyboard.D.triggered;
+    }
 }
