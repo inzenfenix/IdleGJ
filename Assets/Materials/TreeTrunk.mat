@@ -31,9 +31,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _Ambient_Strength: 0.9
+    - _Explosion: 0
     - _Falloff_Amount: 0.12
     - _Fresnel_Size: 0.35
     - _Lightning_Cutoff: 0
+    - _OutlineThickness: 0
     - _Smoothness: 500
     m_Colors:
     - _Diffuse_Color: {r: 0.4056604, g: 0.2537038, b: 0.08993414, a: 0}

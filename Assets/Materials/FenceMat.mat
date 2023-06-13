@@ -44,9 +44,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _Ambient_Strength: 1.13
+    - _Explosion: 0
     - _Falloff_Amount: 0.61
     - _Fresnel_Size: 0.33
     - _Lightning_Cutoff: 0.14
+    - _OutlineThickness: 0
     - _Smoothness: 3.93
     m_Colors:
     - _Diffuse_Color: {r: 0.4433962, g: 0.25265217, b: 0.085751146, a: 0}
