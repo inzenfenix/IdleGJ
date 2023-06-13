@@ -201,14 +201,14 @@ ScriptedImporter:
     uvTransform: {x: 94, y: 57}
   - name: squirrel1_Frame_4
     originalName: 
-    pivot: {x: 0.46913582, y: -0.33333334}
+    pivot: {x: 0.4625, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 81
+      width: 80
       height: 45
     spriteID: 01e732a6346cdbe44bedcb02f3a9ed81
     spriteBone: []
@@ -221,14 +221,14 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: squirrel1_Frame_5
     originalName: 
-    pivot: {x: 0.46913582, y: -0.33333334}
+    pivot: {x: 0.4625, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 93
+      x: 92
       y: 4
-      width: 81
+      width: 80
       height: 45
     spriteID: 5f1302d44721fb9489237d5481826811
     spriteBone: []
@@ -238,7 +238,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 93, y: 4}
+    uvTransform: {x: 92, y: 4}
   - name: squirrel1_Frame_6
     originalName: 
     pivot: {x: 0.47560975, y: -0.3488372}
@@ -323,17 +323,17 @@ ScriptedImporter:
     - name: squirrel1_Frame_4
       frameIndex: 4
       cellRect:
-        x: 26
+        x: 27
         y: 15
-        width: 81
+        width: 80
         height: 45
       spriteId: 01e732a6346cdbe44bedcb02f3a9ed81
     - name: squirrel1_Frame_5
       frameIndex: 5
       cellRect:
-        x: 26
+        x: 27
         y: 15
-        width: 81
+        width: 80
         height: 45
       spriteId: 5f1302d44721fb9489237d5481826811
     - name: squirrel1_Frame_6
