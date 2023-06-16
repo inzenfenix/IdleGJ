@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem.Controls;
 
 public class Squirrel : MonoBehaviour
 {
@@ -10,16 +11,18 @@ public class Squirrel : MonoBehaviour
     [SerializeField] NavMeshAgent agent;
 
     private bool followingAcorn = false;
+    private float deltaMovement = 0f;
 
-    private float yRotation = 0;
+    private float yRotation = 0f;
 
     private void Start()
     {
         agent.updateRotation = false;
+        //agent.destination = new Vector3(17.30736f, 0, 4.462439f);
     }
     private void Update()
     {
-        //transform.rotation = Quaternion.Euler(0,yRotation,0);
+        transform.rotation = Quaternion.Euler(0,yRotation,0);
         GrabAcorns();
         FollowAcornsAndTrees();
     }
@@ -38,10 +41,13 @@ public class Squirrel : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(this.transform.position, followRadius);
         foreach (Collider collider in colliders)
         {
-            if(collider.gameObject.layer == 10 && !followingAcorn)
+            if (collider != null)
             {
-                agent.destination = collider.transform.position;
-                StartCoroutine(FollowAcorn(collider.gameObject));
+                if (collider.gameObject.layer == 10 && !followingAcorn)
+                {
+                    agent.destination = collider.transform.position;
+                    StartCoroutine(FollowAcorn(collider.gameObject));
+                }
             }
         }
     }
@@ -49,9 +55,10 @@ public class Squirrel : MonoBehaviour
     IEnumerator FollowAcorn(GameObject acorn)
     {
         followingAcorn = true;
-        while(acorn != null || acorn.transform.position.y < -1f)
+        while(acorn != null)
         {
-            yield return new WaitForSeconds(.1f);
+            agent.destination = acorn.transform.position;
+            yield return new WaitForSeconds(.25f);
         }
         followingAcorn = false;
     }
