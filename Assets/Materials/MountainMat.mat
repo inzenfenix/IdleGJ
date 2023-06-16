@@ -38,27 +38,30 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Normal_Map:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: d9db0f3586d878b4d96228b52142116b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SMH:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f6a3998512182b04ea1b2fa30d60bfa8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 67ca348ab97b9c240b27f1386f8060b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _Ambient_Strength: 0.1
-    - _Falloff_Amount: 0.1
-    - _Fresnel_Size: 0.1
-    - _Lightning_Cutoff: 0
-    - _Smoothness: 0.5
+    - _Falloff_Amount: 0.2
+    - _Fresnel_Size: 0.31
+    - _Lightning_Cutoff: 0.82
+    - _Metallic_Strength: 0
+    - _Smoothness: 161.3
+    - _Smoothness_Strength: 0
     - _smoothnessStrengs: 0
     m_Colors:
-    - _Diffuse_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Specular_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Diffuse_Color: {r: 0.053132802, g: 0.054710522, b: 0.05660379, a: 0.48235294}
+    - _Emission_Color: {r: 0.16037738, g: 0.13995196, b: 0.13995196, a: 0}
+    - _Fresnel_Color: {r: 0.47267708, g: 0.6820601, b: 0.8867924, a: 0}
+    - _Specular_Color: {r: 0.38314345, g: 0.38445175, b: 0.3962264, a: 0}
   m_BuildTextureStacks: []
