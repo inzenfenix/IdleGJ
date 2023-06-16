@@ -11,7 +11,6 @@ public class Squirrel : MonoBehaviour
     [SerializeField] NavMeshAgent agent;
 
     private bool followingAcorn = false;
-    private float deltaMovement = 0f;
 
     private float yRotation = 0f;
 
@@ -49,6 +48,8 @@ public class Squirrel : MonoBehaviour
                     StartCoroutine(FollowAcorn(collider.gameObject));
                 }
             }
+            else
+                return;
         }
     }
 
@@ -61,5 +62,11 @@ public class Squirrel : MonoBehaviour
             yield return new WaitForSeconds(.25f);
         }
         followingAcorn = false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(this.transform.position,followRadius);
     }
 }
