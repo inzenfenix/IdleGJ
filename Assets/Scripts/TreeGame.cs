@@ -35,7 +35,7 @@ public class TreeGame : MonoBehaviour
         acorn.name = $"acorn{Random.value * Random.Range(5,1000000)}";
         spawning= true;
         GameObject.Instantiate(acorn,spawnPos[Random.Range(0, spawnPos.Length)], 
-                               Quaternion.identity, this.transform);
+                               Quaternion.identity);
         yield return new WaitForSeconds(.15f);
         spawning = false;
     }
