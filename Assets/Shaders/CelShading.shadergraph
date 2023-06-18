@@ -211,9 +211,6 @@
             "m_Id": "9a2362db03e0496d9ea87c875c9e31a5"
         },
         {
-            "m_Id": "e5ffca69f1c84aec8fd584d2fc321157"
-        },
-        {
             "m_Id": "7b760f2e971f4b81bbdc5613c2961602"
         },
         {
@@ -2471,9 +2468,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -69.00000762939453,
-            "y": 1400.0,
-            "width": 208.0,
+            "x": -69.0,
+            "y": 1406.0,
+            "width": 208.00003051757813,
             "height": 326.0
         }
     },
@@ -7651,32 +7648,9 @@
     "m_ObjectId": "9e893bbab7764064842370911fd42705",
     "m_Title": "Diffuse Light",
     "m_Position": {
-        "x": 10.0,
-        "y": 10.0
+        "x": -1950.000244140625,
+        "y": 1143.0001220703125
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
-    "m_ObjectId": "a01a5842a95e4ef2be2642a3b3674c68",
-    "m_Id": 0,
-    "m_DisplayName": "Diffuse",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Diffuse",
-    "m_StageCapability": 3,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_Labels": []
 }
 
 {
@@ -8363,7 +8337,7 @@
         "plus"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": false,
+    "m_PreviewExpanded": true,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -9776,51 +9750,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.SubGraphNode",
-    "m_ObjectId": "e5ffca69f1c84aec8fd584d2fc321157",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "CalcAdditionalSpecular",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 456.74224853515627,
-            "y": 1284.6817626953125,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "f361be943704408a9c9b63f85867ea02"
-        },
-        {
-            "m_Id": "a01a5842a95e4ef2be2642a3b3674c68"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"86babb793224f0a4392a664382dc90ed\",\n        \"type\": 3\n    }\n}",
-    "m_PropertyGuids": [
-        "4a0a0905-9d30-4074-a629-e26be8800c84"
-    ],
-    "m_PropertyIds": [
-        -443531909
-    ],
-    "m_Dropdowns": [],
-    "m_DropdownSelectedEntries": []
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "e6604f068bfa45b499c562bb449b5600",
     "m_Id": 1,
@@ -10133,21 +10062,6 @@
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "f361be943704408a9c9b63f85867ea02",
-    "m_Id": -443531909,
-    "m_DisplayName": "Smoothness",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "_Smoothness",
-    "m_StageCapability": 3,
-    "m_Value": 1000.0,
-    "m_DefaultValue": 0.0,
-    "m_Labels": []
 }
 
 {
