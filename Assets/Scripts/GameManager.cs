@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static int seed;
+    private int currentAcorns = 0;
     private void Start()
     {
-        seed = Random.Range(0, 999999999);
-        Random.InitState(seed);
+        EventManager.AddListener("AcornGrabbed", UpdateAcorns);
+    }
+
+    private void UpdateAcorns()
+    {
+        currentAcorns += 1;
+        EventManager.TriggerEvent("UpdateAcornUI", currentAcorns);
     }
 }

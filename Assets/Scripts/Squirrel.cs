@@ -31,7 +31,7 @@ public class Squirrel : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(this.transform.position, radius, 1<<10);
         foreach (Collider collider in colliders)
         {
-            Destroy(collider.gameObject);
+            EventManager.TriggerEvent("Clicked", collider.name);
         }
     }
 

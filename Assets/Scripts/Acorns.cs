@@ -18,7 +18,10 @@ public class Acorns : MonoBehaviour
 
     private void DestroyAcorn(object name)
     {
-        if((string)name == this.name)
-            Destroy(this.gameObject);
+        if ((string)name == gameObject.name)
+        {
+            EventManager.TriggerEvent("AcornGrabbed");
+            Destroy(gameObject);
+        }
     }
 }
