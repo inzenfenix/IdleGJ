@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: 3705d7d16ddfb7a4d92e8b8dd48efc66
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: squirrelidle_Frame_0
+    originalName: 
+    pivot: {x: 0.6144578, y: -0.3902439}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 94
+      y: 108
+      width: 83
+      height: 41
+    spriteID: 5a0c99a02fd890d4ea2448ef9b055bfc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 94, y: 108}
+  - name: squirrelidle_Frame_1
+    originalName: 
+    pivot: {x: 0.6144578, y: -0.3902439}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 185
+      y: 108
+      width: 83
+      height: 41
+    spriteID: 9e49174583272a74280e40e8b5b84cf3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 185, y: 108}
+  - name: squirrelidle_Frame_2
+    originalName: 
+    pivot: {x: 0.60975605, y: -0.37209302}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 356
+      y: 4
+      width: 82
+      height: 43
+    spriteID: ad96eeffc96f9ce4cbe07105bc50a5fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 356, y: 4}
+  - name: squirrelidle_Frame_3
+    originalName: 
+    pivot: {x: 0.60975605, y: -0.37209302}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 57
+      width: 82
+      height: 43
+    spriteID: cbebccbe40cf75b42bf431623f9cc17b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 57}
+  - name: squirrelidle_Frame_4
+    originalName: 
+    pivot: {x: 0.6, y: -0.35555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 80
+      height: 45
+    spriteID: 36237d6e84d4a0e44b506d01be667369
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: squirrelidle_Frame_5
+    originalName: 
+    pivot: {x: 0.6, y: -0.35555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 92
+      y: 4
+      width: 80
+      height: 45
+    spriteID: 703e72b1e5be8ae41add9f8d9919fceb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 92, y: 4}
+  - name: squirrelidle_Frame_6
+    originalName: 
+    pivot: {x: 0.60975605, y: -0.37209302}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 94
+      y: 57
+      width: 82
+      height: 43
+    spriteID: 7f2b184191c256849ba9795331c14123
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 94, y: 57}
+  - name: squirrelidle_Frame_7
+    originalName: 
+    pivot: {x: 0.6144578, y: -0.3902439}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 276
+      y: 108
+      width: 83
+      height: 41
+    spriteID: f9da76ec067a0dc4eb85e49556a9d60d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 276, y: 108}
+  - name: squirrelidle_Frame_8
+    originalName: 
+    pivot: {x: 0.6144578, y: -0.3902439}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 367
+      y: 108
+      width: 83
+      height: 41
+    spriteID: 7fcc391c6d126c043b202daef613181b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 367, y: 108}
+  - name: squirrelidle_Frame_9
+    originalName: 
+    pivot: {x: 0.60975605, y: -0.37209302}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 57
+      width: 82
+      height: 43
+    spriteID: 50f9ce040085eda40abc6c441ec4b303
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 57}
+  - name: squirrelidle_Frame_10
+    originalName: 
+    pivot: {x: 0.60975605, y: -0.37209302}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 274
+      y: 57
+      width: 82
+      height: 43
+    spriteID: 7f0a560030351bb4180ac17af67605d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 274, y: 57}
+  - name: squirrelidle_Frame_11
+    originalName: 
+    pivot: {x: 0.6, y: -0.35555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 4
+      width: 80
+      height: 45
+    spriteID: a0ebb124bae6e45418105ff3bcd2918e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 4}
+  - name: squirrelidle_Frame_12
+    originalName: 
+    pivot: {x: 0.6, y: -0.35555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 268
+      y: 4
+      width: 80
+      height: 45
+    spriteID: 213306988a9736b4ba98dd7a3eda93e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 268, y: 4}
+  - name: squirrelidle_Frame_13
+    originalName: 
+    pivot: {x: 0.60975605, y: -0.37209302}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 364
+      y: 57
+      width: 82
+      height: 43
+    spriteID: d067ac3ace230c545a4d4593d1ff6085
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 364, y: 57}
+  - name: squirrelidle_Frame_14
+    originalName: 
+    pivot: {x: 0.6144578, y: -0.3902439}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 159
+      width: 83
+      height: 41
+    spriteID: 50e25350f7d04e549b7642c997a39a8e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 159}
+  - name: squirrelidle_Frame_15
+    originalName: 
+    pivot: {x: 0.60975605, y: -0.37209302}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 108
+      width: 82
+      height: 43
+    spriteID: 6baed18d0acd2e34890f25509933c402
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 108}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1866928641
+    name: squirrelidle
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: squirrelidle_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 13
+        y: 16
+        width: 83
+        height: 41
+      spriteId: 5a0c99a02fd890d4ea2448ef9b055bfc
+    - name: squirrelidle_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 13
+        y: 16
+        width: 83
+        height: 41
+      spriteId: 9e49174583272a74280e40e8b5b84cf3
+    - name: squirrelidle_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 14
+        y: 16
+        width: 82
+        height: 43
+      spriteId: ad96eeffc96f9ce4cbe07105bc50a5fb
+    - name: squirrelidle_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 14
+        y: 16
+        width: 82
+        height: 43
+      spriteId: cbebccbe40cf75b42bf431623f9cc17b
+    - name: squirrelidle_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 16
+        y: 16
+        width: 80
+        height: 45
+      spriteId: 36237d6e84d4a0e44b506d01be667369
+    - name: squirrelidle_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 16
+        y: 16
+        width: 80
+        height: 45
+      spriteId: 703e72b1e5be8ae41add9f8d9919fceb
+    - name: squirrelidle_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 14
+        y: 16
+        width: 82
+        height: 43
+      spriteId: 7f2b184191c256849ba9795331c14123
+    - name: squirrelidle_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 13
+        y: 16
+        width: 83
+        height: 41
+      spriteId: f9da76ec067a0dc4eb85e49556a9d60d
+    - name: squirrelidle_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 13
+        y: 16
+        width: 83
+        height: 41
+      spriteId: 7fcc391c6d126c043b202daef613181b
+    - name: squirrelidle_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 14
+        y: 16
+        width: 82
+        height: 43
+      spriteId: 50f9ce040085eda40abc6c441ec4b303
+    - name: squirrelidle_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 14
+        y: 16
+        width: 82
+        height: 43
+      spriteId: 7f0a560030351bb4180ac17af67605d0
+    - name: squirrelidle_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 16
+        y: 16
+        width: 80
+        height: 45
+      spriteId: a0ebb124bae6e45418105ff3bcd2918e
+    - name: squirrelidle_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 16
+        y: 16
+        width: 80
+        height: 45
+      spriteId: 213306988a9736b4ba98dd7a3eda93e4
+    - name: squirrelidle_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 14
+        y: 16
+        width: 82
+        height: 43
+      spriteId: d067ac3ace230c545a4d4593d1ff6085
+    - name: squirrelidle_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 13
+        y: 16
+        width: 83
+        height: 41
+      spriteId: 50e25350f7d04e549b7642c997a39a8e
+    - name: squirrelidle_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 14
+        y: 16
+        width: 82
+        height: 43
+      spriteId: 6baed18d0acd2e34890f25509933c402
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 64}
