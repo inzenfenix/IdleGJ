@@ -32,25 +32,24 @@ public class CameraBehaviour : MonoBehaviour
 
                 else if(hit.transform.gameObject.tag == "Squirrel")
                 {
-                    StartCoroutine(DropSquirrel(hit.transform, mousePos));
+                    StartCoroutine(DropSquirrel(hit.transform));
                     hit.transform.localScale *= 1.25f;
                 }
             }
         }
     }
 
-    private IEnumerator DropSquirrel(Transform squirrelTransform, Vector2 mousePos)
+    private IEnumerator DropSquirrel(Transform squirrelTransform)
     {
         Vector3 originalSize = squirrelTransform.localScale;
         RaycastHit hit;
         while (PlayerInput._Instance.OnHoldClick())
         {
-            squirrelTransform.localScale *= 1.01f;
-            Debug.Log("a");
+            Vector2 mousePos = Mouse.current.position.ReadValue();
             Ray ray = Camera.main.ScreenPointToRay(mousePos);
-            if (Physics.Raycast(ray, out hit, 1000, 13))
+            if (Physics.Raycast(ray, out hit, 1000))
             {
-                squirrelTransform.localPosition = hit.transform.localPosition + new Vector3(0,1,0);
+                squirrelTransform.localPosition = new Vector3(hit.transform.localPosition.x, hit.transform.localPosition.y + 1, Camera.main.transform.position.z + 1);
             }
 
             yield return new WaitForEndOfFrame();
