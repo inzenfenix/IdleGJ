@@ -9,6 +9,7 @@ public class CameraBehaviour : MonoBehaviour
 {
     [SerializeField] float speed;
     private bool hovering = false;
+    [SerializeField] GameObject grabbedSquirrel;
     private void Update()
     {
         //We use the singleton to check if we press the left button of our mouse
@@ -28,8 +29,33 @@ public class CameraBehaviour : MonoBehaviour
                 {
                     EventManager.TriggerEvent("Clicked", hit.transform.name);
                 }
+
+                else if(hit.transform.gameObject.tag == "Squirrel")
+                {
+                    StartCoroutine(DropSquirrel(hit.transform.localScale));
+                }
             }
         }
+    }
+
+    private IEnumerator DropSquirrel(Vector3 size)
+    {
+        Vector3 originalSize = size;
+        size = size * 1.25f;
+        while (true)
+        {
+            if (PlayerInput._Instance.OnExitClick())
+            {
+                DropSquirrelToGround(originalSize);
+                break;
+            }
+            yield return new WaitForSeconds(.08f);
+        }
+    }
+
+    private void DropSquirrelToGround(Vector3 size)
+    {
+
     }
 
     public void OnLeftSideHover()

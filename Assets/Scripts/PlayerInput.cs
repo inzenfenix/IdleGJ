@@ -58,4 +58,9 @@ public class PlayerInput : MonoBehaviour
     {
         return controller.Keyboard.D.triggered;
     }
+
+    public bool OnExitClick()
+    {
+        return controller.Mouse.Click.WasReleasedThisFrame();
+    }
 }
