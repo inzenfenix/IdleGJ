@@ -45,7 +45,7 @@ public class CameraBehaviour : MonoBehaviour
     private IEnumerator MoveCamera(int movement)
     {
         hovering = true;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.09f);
         while (hovering)
         {
             float nextMovement = movement * Time.deltaTime * speed;
