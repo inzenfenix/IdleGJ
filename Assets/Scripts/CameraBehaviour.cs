@@ -9,7 +9,8 @@ public class CameraBehaviour : MonoBehaviour
 {
     [SerializeField] float speed;
     private bool hovering = false;
-    [SerializeField] GameObject grabbedSquirrel;
+    GameObject grabbedSquirrel;
+    [SerializeField] LayerMask IgnoreMask;
     private void Update()
     {
         //We use the singleton to check if we press the left button of our mouse
@@ -23,43 +24,14 @@ public class CameraBehaviour : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(mousePos);
 
             //If we hit something with the ray, we take OUT the information on hit
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit,10000, ~IgnoreMask))
             {
                 if (hit.transform.gameObject.tag == "Interactable")
                 {
                     EventManager.TriggerEvent("Clicked", hit.transform.name);
                 }
-
-                else if(hit.transform.gameObject.tag == "Squirrel")
-                {
-                    StartCoroutine(DropSquirrel(hit.transform));
-                    hit.transform.localScale *= 1.25f;
-                }
             }
         }
-    }
-
-    private IEnumerator DropSquirrel(Transform squirrelTransform)
-    {
-        Vector3 originalSize = squirrelTransform.localScale;
-        RaycastHit hit;
-        while (PlayerInput._Instance.OnHoldClick())
-        {
-            Vector2 mousePos = Mouse.current.position.ReadValue();
-            Ray ray = Camera.main.ScreenPointToRay(mousePos);
-            if (Physics.Raycast(ray, out hit, 1000))
-            {
-                squirrelTransform.localPosition = new Vector3(hit.transform.localPosition.x, hit.transform.localPosition.y + 1, Camera.main.transform.position.z + 1);
-            }
-
-            yield return new WaitForEndOfFrame();
-        }
-        DropSquirrelToGround(originalSize);
-    }
-
-    private void DropSquirrelToGround(Vector3 size)
-    {
-
     }
 
     public void OnLeftSideHover()
