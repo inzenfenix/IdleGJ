@@ -1407,6 +1407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  grabbedSquirrel: {fileID: 0}
 --- !u!1001 &331228760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3079,7 +3080,7 @@ GameObject:
   - component: {fileID: 804939873}
   - component: {fileID: 804939872}
   - component: {fileID: 804939876}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -63,4 +63,9 @@ public class PlayerInput : MonoBehaviour
     {
         return controller.Mouse.Click.WasReleasedThisFrame();
     }
+
+    public bool OnHoldClick()
+    {
+        return controller.Mouse.Click.IsPressed();
+    }
 }
