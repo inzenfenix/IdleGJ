@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Experimental.AI;
 using UnityEngine.InputSystem;
 
 public class CameraBehaviour : MonoBehaviour
 {
+    [SerializeField] float speed;
+    private bool hovering = false;
     private void Update()
     {
         //We use the singleton to check if we press the left button of our mouse
@@ -26,5 +30,33 @@ public class CameraBehaviour : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void OnLeftSideHover()
+    {
+        StartCoroutine(MoveCamera(-1));
+    }
+
+    public void OnRightSideHover()
+    {
+        StartCoroutine(MoveCamera(1));
+    }
+
+    private IEnumerator MoveCamera(int movement)
+    {
+        hovering = true;
+        yield return new WaitForSeconds(.1f);
+        while (hovering)
+        {
+            float nextMovement = movement * Time.deltaTime * speed;
+            if (transform.position.x + nextMovement > -35.09f && transform.position.x + nextMovement < 37.59f)
+                transform.position = new Vector3(transform.position.x + nextMovement, transform.position.y, transform.position.z);
+            yield return new WaitForEndOfFrameUnit();
+        }
+    }
+
+    public void OnHoveringSideExit()
+    {
+        hovering = false;
     }
 }
