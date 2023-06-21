@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2.5
-  followRadius: 10
+  followRadius: 15
   agent: {fileID: 5560991222276189012}
 --- !u!195 &5560991222276189012
 NavMeshAgent:

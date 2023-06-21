@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class Acorns : MonoBehaviour
 {
+    public IObjectPool<GameObject> Pool { get; set; }
 
+    
     private void Awake()
     {
         EventManager.AddListener("Clicked", DestroyAcorn);
@@ -21,7 +24,9 @@ public class Acorns : MonoBehaviour
         if ((string)name == gameObject.name)
         {
             EventManager.TriggerEvent("AcornGrabbed");
-            Destroy(gameObject);
+            ReleaseObject();
         }
     }
+
+    public void ReleaseObject() => Pool.Release(gameObject);
 }

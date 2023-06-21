@@ -40,7 +40,7 @@ public class Squirrel : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(this.transform.position, followRadius);
         foreach (Collider collider in colliders)
         {
-            if (collider != null)
+            if (collider.gameObject.activeInHierarchy)
             {
                 if (collider.gameObject.layer == 10 && !followingAcorn)
                 {
@@ -56,7 +56,7 @@ public class Squirrel : MonoBehaviour
     IEnumerator FollowAcorn(GameObject acorn)
     {
         followingAcorn = true;
-        while(acorn != null)
+        while(acorn.activeInHierarchy)
         {
             agent.destination = acorn.transform.position;
             yield return new WaitForSeconds(.25f);
