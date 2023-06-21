@@ -9,7 +9,6 @@ public class CameraBehaviour : MonoBehaviour
 {
     [SerializeField] float speed;
     private bool hovering = false;
-    GameObject grabbedSquirrel;
     [SerializeField] LayerMask IgnoreMask;
     private void Update()
     {
