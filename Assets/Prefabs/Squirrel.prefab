@@ -27,8 +27,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 3808152486613988504, guid: 3705d7d16ddfb7a4d92e8b8dd48efc66,
-        type: 3}
+      objectReference: {fileID: 9100000, guid: e60cc8c83659eb04797a16fe60616da2, type: 2}
     - target: {fileID: 3626916397498700004, guid: ab230929a58576e47af484be13b8f3fc,
         type: 3}
       propertyPath: m_Sprite
@@ -123,6 +122,12 @@ PrefabInstance:
       addedObject: {fileID: 5560991222276189012}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: ab230929a58576e47af484be13b8f3fc,
     type: 3}
+--- !u!95 &363323536452150348 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1160356261127867848, guid: ab230929a58576e47af484be13b8f3fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1517890147296323972}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8478270783176998636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: ab230929a58576e47af484be13b8f3fc,
@@ -165,6 +170,7 @@ MonoBehaviour:
   radius: 2.5
   followRadius: 15
   agent: {fileID: 5560991222276189012}
+  squirrelAnimator: {fileID: 363323536452150348}
 --- !u!195 &5560991222276189012
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ public class Squirrel : MonoBehaviour
 
     private bool followingAcorn = false;
 
-    private float yRotation = 0f;
 
     private void Start()
     {
@@ -22,7 +21,6 @@ public class Squirrel : MonoBehaviour
     }
     private void Update()
     {
-        transform.rotation = Quaternion.Euler(0,yRotation,0);
         GrabAcorns();
         FollowAcornsAndTrees();
     }
@@ -47,6 +45,12 @@ public class Squirrel : MonoBehaviour
                 {
                     agent.destination = collider.transform.position;
                     StartCoroutine(FollowAcorn(collider.gameObject));
+                    if(collider.transform.position.x < transform.position.x)
+                    {
+                        transform.rotation = Quaternion.Euler(0, 180, 0);
+                    }
+                    else
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
             }
             else
