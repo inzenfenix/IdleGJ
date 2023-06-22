@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 64f47164c6c9dee46b074fe08eca3f08
+guid: 80f7be8975eefaa4aac92ae9c6c8a87a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: ui1
+  - name: arrowright1
     originalName: 
-    pivot: {x: 0.5, y: -0.007874016}
+    pivot: {x: 0.5, y: -0.16666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 192
-      height: 127
-    spriteID: 4d14220186c43cd47a6e6ae6eb85daac
+      width: 6
+      height: 12
+    spriteID: 8f88e7f0f412c2b4f8671c0026fcffa5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,23 +142,23 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1756371257
-    name: ui1
+    guid: -1668367658
+    name: arrowright1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: ui1
+    - name: arrowright1
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 1
-        width: 192
-        height: 127
-      spriteId: 4d14220186c43cd47a6e6ae6eb85daac
+        x: 5
+        y: 2
+        width: 6
+        height: 12
+      spriteId: 8f88e7f0f412c2b4f8671c0026fcffa5
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 192, y: 128}
+  canvasSize: {x: 16, y: 16}
