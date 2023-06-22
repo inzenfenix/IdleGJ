@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Experimental.AI;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class CameraBehaviour : MonoBehaviour
@@ -10,6 +11,7 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField] float speed;
     private bool hovering = false;
     [SerializeField] LayerMask IgnoreMask;
+
     private void Update()
     {
         //We use the singleton to check if we press the left button of our mouse
@@ -32,6 +34,8 @@ public class CameraBehaviour : MonoBehaviour
             }
         }
     }
+
+    
 
     public void OnLeftSideHover()
     {

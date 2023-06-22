@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class UIUpdater : MonoBehaviour
 {
@@ -22,10 +24,41 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] Sprite treeDefaultSprite;
     [SerializeField] Image treeButtonImage;
 
+    [Header("Menus")]
+    GraphicRaycaster raycaster;
+    EventSystem eventSystem;
+    PointerEventData eventMouse;
+
 
     private void Start()
     {
         EventManager.AddListener("UpdateAcornUI", UpdateAcorns);
+        eventSystem = GetComponent<EventSystem>();
+        raycaster = gameObject.GetComponent<GraphicRaycaster>();
+    }
+
+    private void Update()
+    {
+        if(PlayerInput._Instance.OnClick())
+        {
+            CheckForMenus();
+        }
+    }
+
+    private void CheckForMenus()
+    {
+        //If we do we get the position of our mouse on screen
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+        eventMouse = new PointerEventData(eventSystem);
+        eventMouse.position = mousePos;
+
+        //A ray using position of our mouse, we use this to look where we are pointing
+        List<RaycastResult> results = new List<RaycastResult>();
+        raycaster.Raycast(eventMouse, results);
+        if (results.Count == 0)
+        {
+            OnClickSquirrel();
+        }
     }
 
     private void UpdateAcorns(object acornsSize)
