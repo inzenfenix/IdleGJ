@@ -11,9 +11,11 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField] float speed;
     private bool hovering = false;
     [SerializeField] LayerMask IgnoreMask;
+    [SerializeField] Transform buyPoint;
 
     private void Update()
     {
+        buyPoint.position = new Vector3(transform.position.x, buyPoint.position.y, buyPoint.position.z);
         //We use the singleton to check if we press the left button of our mouse
         if (PlayerInput._Instance.OnClick())
         {
