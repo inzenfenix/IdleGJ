@@ -14,6 +14,7 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] Sprite squirrelHoverDefault;
     [SerializeField] Sprite squirrelClick;
     [SerializeField] Image squirrelButtonImage;
+    [SerializeField] GameObject menuSquirrel;
 
     //Tree Menu
     [Header("Tree")]
@@ -46,6 +47,24 @@ public class UIUpdater : MonoBehaviour
     public void OnClickSquirrel()
     {
         squirrelButtonImage.sprite = squirrelClick;
+        if(menuSquirrel.activeInHierarchy)
+            menuSquirrel.SetActive(false);
+        else
+            menuSquirrel.SetActive(true);
+
+        StartCoroutine(ChangeSprite(squirrelButtonImage, squirrelHoverDefault));
+    }
+
+    public void OnPointEnterSquirrel()
+    {
+        squirrelButtonImage.sprite = squirrelClick;
+    }
+
+    private IEnumerator ChangeSprite(Image image, Sprite sprite)
+    {
+        yield return new WaitForSeconds(.1f);
+        image.sprite = sprite;
+
     }
 
     public void OnClickTree()
