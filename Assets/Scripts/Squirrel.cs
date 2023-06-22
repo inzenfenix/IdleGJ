@@ -9,6 +9,7 @@ public class Squirrel : MonoBehaviour
     [SerializeField] float radius = 5f;
     [SerializeField] float followRadius = 25f;
     [SerializeField] NavMeshAgent agent;
+    [SerializeField] Animator squirrelAnimator;
 
     private bool followingAcorn = false;
 
@@ -56,11 +57,13 @@ public class Squirrel : MonoBehaviour
     IEnumerator FollowAcorn(GameObject acorn)
     {
         followingAcorn = true;
+        squirrelAnimator.SetBool("Walking", true);
         while(acorn.activeInHierarchy)
         {
             agent.destination = acorn.transform.position;
             yield return new WaitForSeconds(.25f);
         }
+        squirrelAnimator.SetBool("Walking", false);
         followingAcorn = false;
     }
 
