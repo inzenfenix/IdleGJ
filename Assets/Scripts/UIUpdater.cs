@@ -55,7 +55,7 @@ public class UIUpdater : MonoBehaviour
         //A ray using position of our mouse, we use this to look where we are pointing
         List<RaycastResult> results = new List<RaycastResult>();
         raycaster.Raycast(eventMouse, results);
-        if (results.Count == 0)
+        if (results.Count == 0 && menuSquirrel.activeInHierarchy)
         {
             OnClickSquirrel();
         }

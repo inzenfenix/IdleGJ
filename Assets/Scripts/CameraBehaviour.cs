@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Experimental.AI;
+using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
@@ -31,11 +31,42 @@ public class CameraBehaviour : MonoBehaviour
                 {
                     EventManager.TriggerEvent("Clicked", hit.transform.name);
                 }
+                if(hit.transform.gameObject.tag == "Squirrel")
+                {
+                    GrabSquirrel(hit.transform);
+                }
             }
         }
     }
 
     
+    private void GrabSquirrel(Transform squirrel)
+    {
+        NavMeshAgent agent = squirrel.GetComponent<NavMeshAgent>();
+        StartCoroutine(GrabbedSquirrel(squirrel, agent));       
+    }
+
+    private IEnumerator GrabbedSquirrel(Transform squirrel, NavMeshAgent agent)
+    {
+        Vector3 originalScale = squirrel.localScale;
+        agent.updatePosition = false;
+        squirrel.localScale *= 1.5f;
+        Vector2 mousePos;
+        Vector3 squirrelPos;
+        while (PlayerInput._Instance.OnHoldClick())
+        {
+            mousePos = Mouse.current.position.ReadValue();
+            squirrelPos = Camera.main.ScreenToWorldPoint(mousePos);
+            squirrel.position = new Vector3(squirrelPos.x, squirrel.position.y, squirrel.position.z);
+            yield return new WaitForEndOfFrame();
+        }
+        mousePos = Mouse.current.position.ReadValue();
+        squirrelPos = Camera.main.ScreenToWorldPoint(mousePos);
+        squirrel.position = new Vector3(squirrelPos.x, squirrel.position.y, squirrel.position.z);
+        agent.nextPosition = new Vector3(squirrelPos.x, squirrel.position.y, squirrel.position.z);
+        agent.updatePosition = true;
+        squirrel.localScale = originalScale;
+    }
 
     public void OnLeftSideHover()
     {
