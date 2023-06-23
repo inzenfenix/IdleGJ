@@ -12,6 +12,7 @@ public class CameraBehaviour : MonoBehaviour
     private bool hovering = false;
     [SerializeField] LayerMask IgnoreMask;
     [SerializeField] Transform buyPoint;
+    private bool pressingKey = false;
 
     private void Update()
     {
@@ -39,6 +40,15 @@ public class CameraBehaviour : MonoBehaviour
                 }
             }
         }
+        if (!pressingKey)
+        {
+            if (PlayerInput._Instance.OnHoldA())
+                StartCoroutine(MoveCameraWithKeyboard(-1, "A"));
+
+            if (PlayerInput._Instance.OnHoldD())
+                StartCoroutine(MoveCameraWithKeyboard(1, "D"));
+        }
+
     }
 
     
@@ -52,7 +62,7 @@ public class CameraBehaviour : MonoBehaviour
     {
         Vector3 originalScale = squirrel.localScale;
         agent.updatePosition = false;
-        squirrel.localScale *= 1.5f;
+        squirrel.localScale *= 1.25f;
         Vector2 mousePos;
         Vector3 squirrelPos;
         while (PlayerInput._Instance.OnHoldClick())
@@ -91,6 +101,29 @@ public class CameraBehaviour : MonoBehaviour
                 transform.position = new Vector3(transform.position.x + nextMovement, transform.position.y, transform.position.z);
             yield return new WaitForEndOfFrameUnit();
         }
+    }
+
+    private IEnumerator MoveCameraWithKeyboard(int movement, string key)
+    {
+        pressingKey = true;
+        bool pressing;
+        yield return new WaitForSeconds(.05f);
+        if(key == "A")
+                pressing = PlayerInput._Instance.OnHoldA();
+        else
+            pressing = PlayerInput._Instance.OnHoldD();
+        while (pressing)
+        {
+            if (key == "A")
+                pressing = PlayerInput._Instance.OnHoldA();
+            else
+                pressing = PlayerInput._Instance.OnHoldD();
+            float nextMovement = movement * Time.deltaTime * speed * 1.5f;
+            if (transform.position.x + nextMovement > -35.09f && transform.position.x + nextMovement < 37.59f)
+                transform.position = new Vector3(transform.position.x + nextMovement, transform.position.y, transform.position.z);
+            yield return new WaitForEndOfFrameUnit();
+        }
+        pressingKey = false;
     }
 
     public void OnHoveringSideExit()

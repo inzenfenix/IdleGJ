@@ -68,4 +68,14 @@ public class PlayerInput : MonoBehaviour
     {
         return controller.Mouse.Click.IsPressed();
     }
+
+    public bool OnHoldA()
+    {
+        return controller.Keyboard.A.IsPressed();
+    }
+
+    public bool OnHoldD()
+    {
+        return controller.Keyboard.D.IsPressed();
+    }
 }
