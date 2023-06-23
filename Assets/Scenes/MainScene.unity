@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 73324b55f67f54c7bbf43204788b8bbe, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17983143, g: 0.22516656, b: 0.30662817, a: 1}
+  m_IndirectSpecularColor: {r: 0.034722555, g: 0.22462317, b: 0.38724187, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 12916260}
   - component: {fileID: 12916259}
   m_Layer: 5
-  m_Name: LeftArrowButton
+  m_Name: RightArrowButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 137951354}
   - component: {fileID: 137951353}
   m_Layer: 5
-  m_Name: LeftArrowButton
+  m_Name: RightArrowButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1005,7 +1005,7 @@ GameObject:
   - component: {fileID: 312778229}
   - component: {fileID: 312778228}
   m_Layer: 5
-  m_Name: LeftArrowButton
+  m_Name: RightArrowButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1143,7 +1143,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1761945334}
-  - {fileID: 1814402602}
   - {fileID: 333818787}
   - {fileID: 328896541}
   - {fileID: 1867832372}
@@ -1753,6 +1752,7 @@ MonoBehaviour:
   squirrels:
   - {fileID: 11400000, guid: e51ebc9089980db49a7317f314592be8, type: 2}
   - {fileID: 11400000, guid: f56d4a86ec4b8a34ca347bf44abfdaee, type: 2}
+  buyPoint: {fileID: 911836333}
   treeClick: {fileID: -3439451003447242159, guid: 284bac355cf702143a4aed6d63a4b789,
     type: 3}
   treeDefaultSprite: {fileID: -8713819950462957532, guid: aae3d1df79f25b340a5355984daa2e45,
@@ -1810,7 +1810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2161,94 +2161,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 263.65, y: 89.16, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &445515325
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 314697981}
-    m_Modifications:
-    - target: {fileID: 8478270783176998636, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_Name
-      value: Squirrel
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.8199998
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.475751
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -30.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d64627af730002a48995a6d8c4b84c01, type: 3}
 --- !u!4 &469204741 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3086236257397642109, guid: 7fae29d8f6173c845bd5508ae377bc93,
@@ -2537,7 +2449,7 @@ GameObject:
   - component: {fileID: 490221258}
   - component: {fileID: 490221257}
   m_Layer: 5
-  m_Name: RightArrowButton
+  m_Name: LeftArrowButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2698,7 +2610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3055,7 +2967,7 @@ GameObject:
   - component: {fileID: 536120953}
   - component: {fileID: 536120952}
   m_Layer: 5
-  m_Name: RightArrowButton
+  m_Name: LeftArrowButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3222,7 +3134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3745,7 +3657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4727,7 +4639,7 @@ GameObject:
   - component: {fileID: 950034119}
   - component: {fileID: 950034118}
   m_Layer: 5
-  m_Name: RightArrowButton
+  m_Name: LeftArrowButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4849,7 +4761,7 @@ GameObject:
   - component: {fileID: 952488459}
   - component: {fileID: 952488458}
   m_Layer: 5
-  m_Name: LeftArrowButton
+  m_Name: RightArrowButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6531,7 +6443,7 @@ GameObject:
   - component: {fileID: 1331515983}
   - component: {fileID: 1331515982}
   m_Layer: 5
-  m_Name: 'RightArrowButton '
+  m_Name: 'LeftArrowButton '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8399,12 +8311,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807912866}
   m_CullTransparentMesh: 1
---- !u!4 &1814402602 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8666373551207601801, guid: d64627af730002a48995a6d8c4b84c01,
-    type: 3}
-  m_PrefabInstance: {fileID: 445515325}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1818439983
 GameObject:
   m_ObjectHideFlags: 0
@@ -9527,7 +9433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2038036485
 RectTransform:
   m_ObjectHideFlags: 0

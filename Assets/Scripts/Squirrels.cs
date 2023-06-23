@@ -10,4 +10,5 @@ public class Squirrels : ScriptableObject
     public GameObject squirrel;
     public Color color;
     public int requiredLevel;
+    public int index;
 }

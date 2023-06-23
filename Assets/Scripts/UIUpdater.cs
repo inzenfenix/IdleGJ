@@ -19,6 +19,7 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] GameObject menuSquirrel;
     [SerializeField] GameObject[] buyableSquirrels;
     [SerializeField] Squirrels[] squirrels;
+    [SerializeField] Transform buyPoint;
     private int currentIndexSquirrels = 0;
 
     //Tree Menu
@@ -139,11 +140,42 @@ public class UIUpdater : MonoBehaviour
 
             UpdateShopSingleSquirrel(buyableSquirrels[i], squirrels[i + currentIndexSquirrels]);
         }
+
+        for (int i = 0; i < 4; i++)
+        {
+            foreach(Transform item in buyableSquirrels[i].transform)
+            {
+                if (item.name == "Description")
+                    if (item.GetComponent<TextMeshProUGUI>().text == "Sample text")
+                        buyableSquirrels[i].gameObject.SetActive(false);
+                    else
+                        buyableSquirrels[i].gameObject.SetActive(true);
+            }
+        }
     }
 
     private void UpdateShopSingleSquirrel(GameObject squirrel, Squirrels squirrelInfo)
     {
         squirrel.GetComponentInChildren<TextMeshProUGUI>().text = squirrelInfo.description + " Price: " + squirrelInfo.defaultPrice + " Acorns";
         squirrel.GetComponent<Image>().color = squirrelInfo.color;
+        squirrelInfo.squirrel.GetComponent<SpriteRenderer>().color = squirrelInfo.color;
+        Button buy = null;
+        foreach (Transform child in squirrel.transform)
+        {
+            if (child.name == "BuyButton")
+            {
+                buy = child.GetComponent<Button>();
+                break;
+            }
+        }
+        if (buy != null)
+        {
+            buy.onClick.AddListener(delegate() { BoughtSquirrel(squirrelInfo.squirrel); });
+        }
+    }
+
+    public void BoughtSquirrel(GameObject squirrel)
+    {
+        Instantiate(squirrel, buyPoint.position, Quaternion.identity);
     }
 }
