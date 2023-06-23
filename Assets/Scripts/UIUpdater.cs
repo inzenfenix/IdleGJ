@@ -18,7 +18,7 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] Image squirrelButtonImage;
     [SerializeField] GameObject menuSquirrel;
     [SerializeField] GameObject[] buyableSquirrels;
-    [SerializeField] Squirrels[] squirrels = new Squirrels[4];
+    [SerializeField] Squirrels[] squirrels;
     private int currentSquirrelsPage = 0;
 
     //Tree Menu
