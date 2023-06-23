@@ -10,4 +10,5 @@ public class Squirrels : ScriptableObject
     [SerializeField] GameObject squirrel;
     [SerializeField] Color color;
     [SerializeField] int requiredLevel;
+    [SerializeField] int index;
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17983143, g: 0.22516656, b: 0.30662817, a: 1}
+  m_IndirectSpecularColor: {r: 0.1798311, g: 0.22516589, b: 0.30662698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1922,6 +1922,11 @@ MonoBehaviour:
     type: 3}
   squirrelButtonImage: {fileID: 1818439986}
   menuSquirrel: {fileID: 2038036484}
+  buyableSquirrels:
+  - {fileID: 907746515}
+  - {fileID: 273298107}
+  - {fileID: 477677689}
+  - {fileID: 963456827}
   treeClick: {fileID: -3439451003447242159, guid: 284bac355cf702143a4aed6d63a4b789,
     type: 3}
   treeDefaultSprite: {fileID: -8713819950462957532, guid: aae3d1df79f25b340a5355984daa2e45,

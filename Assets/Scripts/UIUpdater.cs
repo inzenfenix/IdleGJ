@@ -17,6 +17,9 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] Sprite squirrelClick;
     [SerializeField] Image squirrelButtonImage;
     [SerializeField] GameObject menuSquirrel;
+    [SerializeField] GameObject[] buyableSquirrels;
+    [SerializeField] Squirrels[] squirrels = new Squirrels[4];
+    private int currentSquirrelsPage = 0;
 
     //Tree Menu
     [Header("Tree")]
@@ -108,5 +111,12 @@ public class UIUpdater : MonoBehaviour
     public void HoverTreeMenuExit()
     {
         treeButtonImage.sprite = treeDefaultSprite;
+    }
+
+    public void OnNextSquirrelsPress()
+    {
+        //We have an index for each new squirrel, what we could do is to replace them
+        //With the next batch that we send from the GameManager
+        currentSquirrelsPage += 4;
     }
 }
