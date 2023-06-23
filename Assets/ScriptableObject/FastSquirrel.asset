@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: it's fast, and cute.
   defaultPrice: 500
-  squirrel: {fileID: 0}
-  color: {r: 0.41331434, g: 0.4175806, b: 0.6792453, a: 1}
+  squirrel: {fileID: 8478270783176998636, guid: ed1554988a90bef428082077b1b8c578,
+    type: 3}
+  color: {r: 1, g: 0.9681604, b: 0.19339621, a: 1}
   requiredLevel: 0
   index: 1

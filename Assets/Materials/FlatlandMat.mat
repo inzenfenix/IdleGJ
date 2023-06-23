@@ -30,18 +30,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Ambient_Strength: 2.65
-    - _Falloff_Amount: 2.08
-    - _Fresnel_Size: 0.45
-    - _Lightning_Cutoff: 0
+    - _Ambient_Strength: 0.49
+    - _Falloff_Amount: 0.91
+    - _Fresnel_Size: -0.64
+    - _Lightning_Cutoff: 3.9
     - _Metallic_Strength: 0
-    - _Smoothness: 29.83
+    - _Smoothness: 46.59
     - _Smoothness_Strength: 0
     m_Colors:
-    - _Diffuse_Color: {r: 0.20924604, g: 0.254717, b: 0.092515126, a: 0}
+    - _Diffuse_Color: {r: 0.20162164, g: 0.4528302, b: 0.19437523, a: 0}
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _Fresnel_Color: {r: 0.14978638, g: 0.6226415, b: 0.1565415, a: 0}
-    - _Specular_Color: {r: 0.24366684, g: 0.5660378, b: 0.2322891, a: 0}
+    - _Fresnel_Color: {r: 0.01561943, g: 0.3679245, b: 0.03955974, a: 0}
+    - _Specular_Color: {r: 0.45019007, g: 0.5943396, b: 0.4457547, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5469690102357276081
 MonoBehaviour:
