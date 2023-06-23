@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1798311, g: 0.22516589, b: 0.30662698, a: 1}
+  m_IndirectSpecularColor: {r: 0.17983143, g: 0.22516656, b: 0.30662817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1121,14 +1121,14 @@ RectTransform:
   - {fileID: 502800324}
   - {fileID: 1331515981}
   - {fileID: 312778227}
-  - {fileID: 601750930}
   - {fileID: 1746705404}
+  - {fileID: 601750930}
   m_Father: {fileID: 2038036485}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 49.5, y: -151.8}
+  m_AnchoredPosition: {x: 49.5, y: -151.5}
   m_SizeDelta: {x: 64.3331, y: 65.9435}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273298109
@@ -1927,6 +1927,9 @@ MonoBehaviour:
   - {fileID: 273298107}
   - {fileID: 477677689}
   - {fileID: 963456827}
+  squirrels:
+  - {fileID: 11400000, guid: e51ebc9089980db49a7317f314592be8, type: 2}
+  - {fileID: 11400000, guid: f56d4a86ec4b8a34ca347bf44abfdaee, type: 2}
   treeClick: {fileID: -3439451003447242159, guid: 284bac355cf702143a4aed6d63a4b789,
     type: 3}
   treeDefaultSprite: {fileID: -8713819950462957532, guid: aae3d1df79f25b340a5355984daa2e45,
@@ -2457,8 +2460,8 @@ RectTransform:
   - {fileID: 1016295683}
   - {fileID: 950034117}
   - {fileID: 12916258}
-  - {fileID: 405282722}
   - {fileID: 731982295}
+  - {fileID: 405282722}
   m_Father: {fileID: 2038036485}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4188,8 +4191,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5147,14 +5150,14 @@ RectTransform:
   - {fileID: 1496541621}
   - {fileID: 490221256}
   - {fileID: 137951352}
-  - {fileID: 496835812}
   - {fileID: 1826037899}
+  - {fileID: 496835812}
   m_Father: {fileID: 2038036485}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 49.5, y: -80.4}
+  m_AnchoredPosition: {x: 49.5, y: -80}
   m_SizeDelta: {x: 64.3331, y: 65.9435}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907746517
@@ -5608,8 +5611,8 @@ RectTransform:
   - {fileID: 265410125}
   - {fileID: 536120951}
   - {fileID: 952488457}
-  - {fileID: 730098539}
   - {fileID: 2064207320}
+  - {fileID: 730098539}
   m_Father: {fileID: 2038036485}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6760,9 +6763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb268768ca139f418532f948a8351cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  squirrels:
-  - {fileID: 11400000, guid: e51ebc9089980db49a7317f314592be8, type: 2}
-  - {fileID: 11400000, guid: f56d4a86ec4b8a34ca347bf44abfdaee, type: 2}
 --- !u!4 &1190310099
 Transform:
   m_ObjectHideFlags: 0
@@ -9576,8 +9576,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9989,7 +9989,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826037898}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9999,7 +9999,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 122, y: -26.2}
+  m_AnchoredPosition: {x: 121.99991, y: -26.199978}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1826037900
@@ -10050,8 +10050,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10860,8 +10860,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

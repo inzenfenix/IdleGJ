@@ -19,6 +19,7 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] GameObject menuSquirrel;
     [SerializeField] GameObject[] buyableSquirrels;
     [SerializeField] Squirrels[] squirrels;
+    private int currentIndexSquirrels = 0;
     private int currentSquirrelsPage = 0;
 
     //Tree Menu
@@ -38,6 +39,8 @@ public class UIUpdater : MonoBehaviour
         EventManager.AddListener("UpdateAcornUI", UpdateAcorns);
         eventSystem = GetComponent<EventSystem>();
         raycaster = gameObject.GetComponent<GraphicRaycaster>();
+
+        UpdateShopSquirrels();
     }
 
     private void Update()
@@ -126,5 +129,22 @@ public class UIUpdater : MonoBehaviour
         //With the next batch that we send from the GameManager
         if(currentSquirrelsPage > 0)
             currentSquirrelsPage -= 4;
+    }
+
+    private void UpdateShopSquirrels()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            if (i + currentIndexSquirrels == squirrels.Length)
+                break;
+
+            UpdateShopSingleSquirrel(buyableSquirrels[i], squirrels[i + currentIndexSquirrels]);
+        }
+    }
+
+    private void UpdateShopSingleSquirrel(GameObject squirrel, Squirrels squirrelInfo)
+    {
+        squirrel.GetComponentInChildren<TextMeshProUGUI>().text = squirrelInfo.description + " Price: " + squirrelInfo.defaultPrice + " Acorns";
+        squirrel.GetComponent<Image>().color = squirrelInfo.color;
     }
 }

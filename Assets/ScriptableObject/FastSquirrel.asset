@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: FastSquirrel
   m_EditorClassIdentifier: 
   description: it's fast, and cute.
-  defaultPrice: 50
+  defaultPrice: 500
   squirrel: {fileID: 0}
-  color: {r: 0.125534, g: 0.1391869, b: 0.8584906, a: 0}
+  color: {r: 0.41331434, g: 0.4175806, b: 0.6792453, a: 1}
   requiredLevel: 0
+  index: 1

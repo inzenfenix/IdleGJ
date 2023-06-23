@@ -5,10 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Squirrel", menuName = "ScriptableObjects/Squirrel", order = 1)]
 public class Squirrels : ScriptableObject
 {
-    [SerializeField] string description;
-    [SerializeField] int defaultPrice;
-    [SerializeField] GameObject squirrel;
-    [SerializeField] Color color;
-    [SerializeField] int requiredLevel;
-    [SerializeField] int index;
+    public string description;
+    public int defaultPrice;
+    public GameObject squirrel;
+    public Color color;
+    public int requiredLevel;
+    public int index;
 }
