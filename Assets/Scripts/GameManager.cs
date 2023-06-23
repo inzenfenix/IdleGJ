@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private int currentAcorns = 0;
+    [SerializeField] List<Squirrels> squirrels;
+
     private void Start()
     {
         EventManager.AddListener("AcornGrabbed", UpdateAcorns);
