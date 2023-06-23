@@ -6,7 +6,8 @@ using UnityEngine;
 public class Squirrels : ScriptableObject
 {
     [SerializeField] string description;
-    [SerializeField] int price;
+    [SerializeField] int defaultPrice;
     [SerializeField] GameObject squirrel;
     [SerializeField] Color color;
+    [SerializeField] int requiredLevel;
 }

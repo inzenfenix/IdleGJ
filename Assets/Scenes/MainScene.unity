@@ -6757,6 +6757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   squirrels:
   - {fileID: 11400000, guid: e51ebc9089980db49a7317f314592be8, type: 2}
+  - {fileID: 11400000, guid: f56d4a86ec4b8a34ca347bf44abfdaee, type: 2}
 --- !u!4 &1190310099
 Transform:
   m_ObjectHideFlags: 0

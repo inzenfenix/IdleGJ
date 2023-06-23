@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5321672716de8184ca99a6079306c402, type: 3}
-  m_Name: RegularSquirrel
+  m_Name: FastSquirrel
   m_EditorClassIdentifier: 
-  description: A regular squirrel, will help you gather acorns!
-  defaultPrice: 10
-  squirrel: {fileID: 8478270783176998636, guid: d64627af730002a48995a6d8c4b84c01,
-    type: 3}
-  color: {r: 1, g: 1, b: 1, a: 0}
+  description: it's fast, and cute.
+  defaultPrice: 50
+  squirrel: {fileID: 0}
+  color: {r: 0.125534, g: 0.1391869, b: 0.8584906, a: 0}
   requiredLevel: 0
