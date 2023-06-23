@@ -20,7 +20,6 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] GameObject[] buyableSquirrels;
     [SerializeField] Squirrels[] squirrels;
     private int currentIndexSquirrels = 0;
-    private int currentSquirrelsPage = 0;
 
     //Tree Menu
     [Header("Tree")]
@@ -120,15 +119,15 @@ public class UIUpdater : MonoBehaviour
     {
         //We have an index for each new squirrel, what we could do is to replace them
         //With the next batch that we send from the GameManager
-        currentSquirrelsPage += 4;
+        currentIndexSquirrels += 4;
     }
 
     public void OnPriorSquirrelsPress()
     {
         //We have an index for each new squirrel, what we could do is to replace them
         //With the next batch that we send from the GameManager
-        if(currentSquirrelsPage > 0)
-            currentSquirrelsPage -= 4;
+        if(currentIndexSquirrels > 0)
+            currentIndexSquirrels -= 4;
     }
 
     private void UpdateShopSquirrels()

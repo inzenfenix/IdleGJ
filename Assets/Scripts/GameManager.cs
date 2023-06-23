@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private int currentAcorns = 0;
+    public static int currentAcorns = 0;
     private int currentSquirrels = 0;
 
     private void Start()
