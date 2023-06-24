@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static int currentAcorns = 0;
     public static int currentSquirrels = 0;
+    public static int currentLevel = 0;
     [SerializeField] Transform buyPoint;
 
     private void Start()
@@ -22,8 +23,9 @@ public class GameManager : MonoBehaviour
 
     private void BoughtSquirrel(object squirrel)
     {
-        GameObject curSquirrel = (GameObject)squirrel;
+        Squirrels curSquirrel = (Squirrels)squirrel;
         currentSquirrels += 1;
-        Instantiate(curSquirrel, buyPoint.position, Quaternion.identity);
+        GameObject finalSquirrel = Instantiate(curSquirrel.squirrel, buyPoint.position, Quaternion.identity);
+        finalSquirrel.GetComponent<SpriteRenderer>().color = curSquirrel.color;
     }
 }
