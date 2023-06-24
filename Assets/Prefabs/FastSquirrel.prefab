@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  followRadius: 15
+  followRadius: 17.5
   agent: {fileID: 5560991222276189012}
   squirrelAnimator: {fileID: 363323536452150348}
 --- !u!195 &5560991222276189012
