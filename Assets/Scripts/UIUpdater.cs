@@ -128,7 +128,7 @@ public class UIUpdater : MonoBehaviour
 
     public void OnPriorSquirrelsPress()
     {
-        if (currentIndexSquirrels < 0)
+        if (currentIndexSquirrels <= 0)
             return;
 
         currentIndexSquirrels -= 4;
@@ -155,6 +155,9 @@ public class UIUpdater : MonoBehaviour
                     else
                         buyableSquirrels[i].SetActive(true);
             }
+
+            if(squirrels.Length - 1 < i + currentIndexSquirrels)
+                buyableSquirrels[i].SetActive(false);
         }
     }
 
@@ -182,6 +185,15 @@ public class UIUpdater : MonoBehaviour
     {
         for(int i = 0; i < squirrelQuantity[index]; i++)
             EventManager.TriggerEvent("BoughtSquirrel", squirrel);
+        squirrelQuantity[index] = 1;
+        foreach (Transform child in buyableSquirrels[index].transform)
+        {
+            if (child.name == "Price")
+            {
+                child.GetComponent<TextMeshProUGUI>().text = squirrelQuantity[index].ToString();
+                break;
+            }
+        }
     }
 
     public void AddAmountToBuy(int index)
