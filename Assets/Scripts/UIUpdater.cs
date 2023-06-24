@@ -19,7 +19,6 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] GameObject menuSquirrel;
     [SerializeField] GameObject[] buyableSquirrels;
     [SerializeField] Squirrels[] squirrels;
-    [SerializeField] Transform buyPoint;
     private int currentIndexSquirrels = 0;
 
     //Tree Menu
@@ -147,9 +146,9 @@ public class UIUpdater : MonoBehaviour
             {
                 if (item.name == "Description")
                     if (item.GetComponent<TextMeshProUGUI>().text == "Sample text")
-                        buyableSquirrels[i].gameObject.SetActive(false);
+                        buyableSquirrels[i].SetActive(false);
                     else
-                        buyableSquirrels[i].gameObject.SetActive(true);
+                        buyableSquirrels[i].SetActive(true);
             }
         }
     }
@@ -168,6 +167,7 @@ public class UIUpdater : MonoBehaviour
                 break;
             }
         }
+
         if (buy != null)
         {
             buy.onClick.AddListener(delegate() { BoughtSquirrel(squirrelInfo.squirrel); });
@@ -176,6 +176,6 @@ public class UIUpdater : MonoBehaviour
 
     public void BoughtSquirrel(GameObject squirrel)
     {
-        Instantiate(squirrel, buyPoint.position, Quaternion.identity);
+        EventManager.TriggerEvent("BoughtSquirrel", squirrel);
     }
 }

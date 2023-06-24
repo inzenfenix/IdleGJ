@@ -66,9 +66,15 @@ public class TreeGame : MonoBehaviour
         animator.SetBool("TakingAcorn", false);
     }
 
-    private void OnTakeFromPool(GameObject obj) => obj.SetActive(true);
+    private void OnTakeFromPool(GameObject obj)
+    {
+        obj.SetActive(true);
+    }
 
-    private void OnReturnedToPool(GameObject obj) => obj.SetActive(false);
+    private void OnReturnedToPool(GameObject obj)
+    {
+        obj.SetActive(false);
+    }
 
     private void OnDestroyPoolObject(GameObject obj) => Destroy(obj);
 }
