@@ -17,6 +17,7 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] Sprite squirrelClick;
     [SerializeField] Image squirrelButtonImage;
     [SerializeField] GameObject menuSquirrel;
+    [SerializeField] GameObject menuTree;
     [SerializeField] GameObject[] buyableSquirrels;
     [SerializeField] Squirrels[] squirrels;
     private int[] squirrelQuantity= new int[4];
@@ -63,10 +64,14 @@ public class UIUpdater : MonoBehaviour
         //A ray using position of our mouse, we use this to look where we are pointing
         List<RaycastResult> results = new List<RaycastResult>();
         raycaster.Raycast(eventMouse, results);
-        if (results.Count == 0 && menuSquirrel.activeInHierarchy)
+        if (results.Count == 0)
         {
-            OnClickSquirrel();
+            if(menuSquirrel.activeInHierarchy)
+                OnClickSquirrel();
+            if (menuTree.activeInHierarchy)
+                OnClickTree();
         }
+        
     }
 
     private void UpdateAcorns(object acornsSize)
@@ -93,6 +98,9 @@ public class UIUpdater : MonoBehaviour
         else
             menuSquirrel.SetActive(true);
 
+        if (menuTree.activeInHierarchy)
+            menuTree.SetActive(false);
+
         StartCoroutine(ChangeSprite(squirrelButtonImage, squirrelHoverDefault));
     }
 
@@ -111,6 +119,13 @@ public class UIUpdater : MonoBehaviour
     public void OnClickTree()
     {
         treeButtonImage.sprite = treeClick;
+        if (menuSquirrel.activeInHierarchy)
+            menuSquirrel.SetActive(false);
+
+        if (!menuTree.activeInHierarchy)
+            menuTree.SetActive(true);
+        else
+            menuTree.SetActive(false);
     }
 
     public void HoverTreeMenuExit()
