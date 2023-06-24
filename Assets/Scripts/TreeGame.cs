@@ -14,6 +14,7 @@ public class TreeGame : MonoBehaviour
     //Spawn points
     Vector3[] spawnPos = new Vector3[2];
     private bool spawning = false;
+    private Animator animator;
 
     //Pooling
     public IObjectPool<GameObject> acornPool { get; set; }
@@ -22,6 +23,7 @@ public class TreeGame : MonoBehaviour
     {
         acornPool = new UnityEngine.Pool.ObjectPool<GameObject>(SpawnAcorn, OnTakeFromPool, OnReturnedToPool,
           OnDestroyPoolObject, true, 100, 100000);
+        animator = GetComponent<Animator>();
     }
     private void Start()
     {
@@ -53,13 +55,15 @@ public class TreeGame : MonoBehaviour
 
     IEnumerator SpawnAcorns()
     {
+        animator.SetBool("TakingAcorn", true);
         //We use a coroutine to make time
         acorn.name = $"acorn{Random.value * Random.Range(5,1000000)}";
         spawning= true;
         GameObject newAcorn = acornPool.Get();
         newAcorn.transform.position = spawnPos[Random.Range(0, spawnPos.Length)];
-        yield return new WaitForSeconds(.15f);
+        yield return new WaitForSeconds(.25f);
         spawning = false;
+        animator.SetBool("TakingAcorn", false);
     }
 
     private void OnTakeFromPool(GameObject obj) => obj.SetActive(true);

@@ -16,7 +16,7 @@ MonoBehaviour:
   renderPassEvent: 300
   outlinesLayerMask:
     serializedVersion: 2
-    m_Bits: 67584
+    m_Bits: 68608
   outlinesOccluderLayerMask:
     serializedVersion: 2
     m_Bits: 0
