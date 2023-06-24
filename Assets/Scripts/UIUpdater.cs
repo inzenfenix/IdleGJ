@@ -117,15 +117,13 @@ public class UIUpdater : MonoBehaviour
 
     public void OnNextSquirrelsPress()
     {
-        //We have an index for each new squirrel, what we could do is to replace them
-        //With the next batch that we send from the GameManager
+        if (currentIndexSquirrels > squirrels.Length + 4)
+            return;
         currentIndexSquirrels += 4;
     }
 
     public void OnPriorSquirrelsPress()
     {
-        //We have an index for each new squirrel, what we could do is to replace them
-        //With the next batch that we send from the GameManager
         if(currentIndexSquirrels > 0)
             currentIndexSquirrels -= 4;
     }
