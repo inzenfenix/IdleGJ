@@ -117,7 +117,7 @@ public class UIUpdater : MonoBehaviour
 
     public void OnNextSquirrelsPress()
     {
-        if (currentIndexSquirrels > squirrels.Length + 4)
+        if (currentIndexSquirrels > squirrels.Length || GameManager.currentLevel < (int)(currentIndexSquirrels/4))
             return;
         currentIndexSquirrels += 4;
     }
