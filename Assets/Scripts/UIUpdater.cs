@@ -157,7 +157,6 @@ public class UIUpdater : MonoBehaviour
     {
         squirrel.GetComponentInChildren<TextMeshProUGUI>().text = squirrelInfo.description + " Price: " + squirrelInfo.defaultPrice + " Acorns";
         squirrel.GetComponent<Image>().color = squirrelInfo.color;
-        squirrelInfo.squirrel.GetComponent<SpriteRenderer>().color = squirrelInfo.color;
         Button buy = null;
         foreach (Transform child in squirrel.transform)
         {
@@ -170,11 +169,11 @@ public class UIUpdater : MonoBehaviour
 
         if (buy != null)
         {
-            buy.onClick.AddListener(delegate() { BoughtSquirrel(squirrelInfo.squirrel); });
+            buy.onClick.AddListener(delegate() { BoughtSquirrel(squirrelInfo); });
         }
     }
 
-    public void BoughtSquirrel(GameObject squirrel)
+    public void BoughtSquirrel(Squirrels squirrel)
     {
         EventManager.TriggerEvent("BoughtSquirrel", squirrel);
     }
