@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5321672716de8184ca99a6079306c402, type: 3}
-  m_Name: TreeSquirrel
+  m_Name: TreeFastSquirrel
   m_EditorClassIdentifier: 
-  description: Clicks the trees and gets you acorns!
-  defaultPrice: 500
-  squirrel: {fileID: 8478270783176998636, guid: 8088b08350e4801419fe069105a2dac6,
+  description: A faster version of prior squirrel!
+  defaultPrice: 1500
+  squirrel: {fileID: 8478270783176998636, guid: 3626e4d93b940cf429e6bd3b54d9b36c,
     type: 3}
-  color: {r: 0.47749776, g: 0.9716981, b: 0.46293163, a: 1}
+  color: {r: 0.15204157, g: 0.3679245, b: 0.1440459, a: 1}
   requiredLevel: 0
-  index: 2
+  index: 3

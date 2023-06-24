@@ -19,6 +19,7 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] GameObject menuSquirrel;
     [SerializeField] GameObject[] buyableSquirrels;
     [SerializeField] Squirrels[] squirrels;
+    private int[] squirrelQuantity= new int[4];
     private int currentIndexSquirrels = 0;
 
     //Tree Menu
@@ -35,6 +36,8 @@ public class UIUpdater : MonoBehaviour
 
     private void Start()
     {
+        for (int i = 0; i < squirrelQuantity.Length; i++)
+            squirrelQuantity[i] = 1;
         EventManager.AddListener("UpdateAcornUI", UpdateAcorns);
         eventSystem = GetComponent<EventSystem>();
         raycaster = gameObject.GetComponent<GraphicRaycaster>();
@@ -120,12 +123,16 @@ public class UIUpdater : MonoBehaviour
         if (currentIndexSquirrels > squirrels.Length || GameManager.currentLevel < (int)(currentIndexSquirrels/4))
             return;
         currentIndexSquirrels += 4;
+        UpdateShopSquirrels();
     }
 
     public void OnPriorSquirrelsPress()
     {
-        if(currentIndexSquirrels > 0)
-            currentIndexSquirrels -= 4;
+        if (currentIndexSquirrels < 0)
+            return;
+
+        currentIndexSquirrels -= 4;
+        UpdateShopSquirrels();
     }
 
     private void UpdateShopSquirrels()
@@ -167,12 +174,46 @@ public class UIUpdater : MonoBehaviour
 
         if (buy != null)
         {
-            buy.onClick.AddListener(delegate() { BoughtSquirrel(squirrelInfo); });
+            buy.onClick.AddListener(delegate() { BoughtSquirrel(squirrelInfo, squirrelInfo.index - currentIndexSquirrels); });
         }
     }
 
-    public void BoughtSquirrel(Squirrels squirrel)
+    public void BoughtSquirrel(Squirrels squirrel, int index)
     {
-        EventManager.TriggerEvent("BoughtSquirrel", squirrel);
+        for(int i = 0; i < squirrelQuantity[index]; i++)
+            EventManager.TriggerEvent("BoughtSquirrel", squirrel);
+    }
+
+    public void AddAmountToBuy(int index)
+    {
+        if (squirrelQuantity[index] == 99)
+            return;
+        squirrelQuantity[index] += 1;
+        foreach(Transform child in buyableSquirrels[index].transform)
+        {
+            Debug.Log(child.name);
+            if(child.name == "Price")
+            {
+                Debug.Log(squirrelQuantity[index]);
+                child.GetComponent<TextMeshProUGUI>().text = squirrelQuantity[index].ToString();
+                break;
+            }
+        }
+    }
+
+    public void DecreaseAmountToBuy(int index)
+    {
+        if (squirrelQuantity[index] == 1)
+            return;
+
+        squirrelQuantity[index] -= 1;
+        foreach (Transform child in buyableSquirrels[index].transform)
+        {
+            if (child.name == "Price")
+            {
+                child.GetComponent<TextMeshProUGUI>().text = squirrelQuantity[index].ToString();
+                break;
+            }
+        }
     }
 }

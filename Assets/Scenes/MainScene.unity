@@ -300,7 +300,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 12916260}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: AddAmountToBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &12916260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,7 +865,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 137951354}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: AddAmountToBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &137951354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1240,7 +1264,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 312778229}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: AddAmountToBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &312778229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,6 +1753,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e51ebc9089980db49a7317f314592be8, type: 2}
   - {fileID: 11400000, guid: f56d4a86ec4b8a34ca347bf44abfdaee, type: 2}
   - {fileID: 11400000, guid: 8779fe03dab030047b8bdf42c4fc7cf2, type: 2}
+  - {fileID: 11400000, guid: eaa366a868d75a64eba7edf92912a439, type: 2}
   treeClick: {fileID: -3439451003447242159, guid: 284bac355cf702143a4aed6d63a4b789,
     type: 3}
   treeDefaultSprite: {fileID: -8713819950462957532, guid: aae3d1df79f25b340a5355984daa2e45,
@@ -1734,7 +1771,7 @@ GameObject:
   - component: {fileID: 405282724}
   - component: {fileID: 405282723}
   m_Layer: 5
-  m_Name: Number
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1780,7 +1817,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '0
+  m_text: '1
 
 '
   m_isRightToLeft: 0
@@ -2507,7 +2544,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 490221258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: DecreaseAmountToBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &490221258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2559,7 +2608,7 @@ GameObject:
   - component: {fileID: 496835814}
   - component: {fileID: 496835813}
   m_Layer: 5
-  m_Name: Number
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2605,7 +2654,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '0
+  m_text: '1
 
 '
   m_isRightToLeft: 0
@@ -3025,7 +3074,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 536120953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: DecreaseAmountToBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &536120953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3083,7 +3144,7 @@ GameObject:
   - component: {fileID: 601750932}
   - component: {fileID: 601750931}
   m_Layer: 5
-  m_Name: 'Number '
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3129,7 +3190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '0
+  m_text: '1
 
 '
   m_isRightToLeft: 0
@@ -3771,7 +3832,7 @@ GameObject:
   - component: {fileID: 730098541}
   - component: {fileID: 730098540}
   m_Layer: 5
-  m_Name: Number
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3817,7 +3878,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '0
+  m_text: '1
 
 '
   m_isRightToLeft: 0
@@ -4684,7 +4745,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 950034119}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: DecreaseAmountToBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &950034119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4806,7 +4879,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 952488459}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: AddAmountToBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &952488459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6528,7 +6613,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1331515983}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: DecreaseAmountToBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1331515983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7087,7 +7184,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1464497410}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: OnPriorSquirrelsPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1464497410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9142,7 +9251,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1830827146}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: OnNextSquirrelsPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1830827146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9712,7 +9833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2038036485
 RectTransform:
   m_ObjectHideFlags: 0
