@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static int currentAcorns = 0;
     public static int currentSquirrels = 0;
+    public static int currentLevel = 0;
     [SerializeField] Transform buyPoint;
 
     private void Start()
