@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static int currentAcorns = 0;
     public static int currentSquirrels = 0;
     public static int currentLevel = 0;
+    public static int acornsGrabbed = 0;
     [SerializeField] Transform buyPoint;
 
     private void Start()
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     private void UpdateAcorns()
     {
         currentAcorns += 1;
+        acornsGrabbed += 1;
         EventManager.TriggerEvent("UpdateAcornUI", currentAcorns);
     }
 
