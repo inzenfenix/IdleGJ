@@ -2361,6 +2361,19 @@ MonoBehaviour:
   - {fileID: 1745012315}
   - {fileID: 582712992}
   - {fileID: 1930686704}
+  getButtons:
+  - {fileID: 1967467781}
+  - {fileID: 1918398927}
+  - {fileID: 564960396}
+  - {fileID: 460831532}
+  greenGetSprite: {fileID: 6068028349781723041, guid: 1f26021f5112c9d419edf9f73af33669,
+    type: 3}
+  grayGetSprite: {fileID: -3744784648759165299, guid: 6b87f03066c35e945b89645d81ee68a5,
+    type: 3}
+  capLevel1: 500
+  capLevel2: 2500
+  capLevel3: 7500
+  capLevel4: 15000
 --- !u!1 &405282721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2782,7 +2795,7 @@ GameObject:
   - component: {fileID: 460831535}
   - component: {fileID: 460831534}
   m_Layer: 5
-  m_Name: GetButton
+  m_Name: GetButton3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2851,7 +2864,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 460831535}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: LevelUp
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &460831535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3900,7 +3925,7 @@ GameObject:
   - component: {fileID: 564960399}
   - component: {fileID: 564960398}
   m_Layer: 5
-  m_Name: GetButton
+  m_Name: GetButton2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3969,7 +3994,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 564960399}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: LevelUp
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &564960399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11437,7 +11474,7 @@ GameObject:
   - component: {fileID: 1918398930}
   - component: {fileID: 1918398929}
   m_Layer: 5
-  m_Name: GetButton
+  m_Name: GetButton1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11506,7 +11543,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1918398930}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: LevelUp
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1918398930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11768,7 +11817,7 @@ GameObject:
   - component: {fileID: 1967467784}
   - component: {fileID: 1967467783}
   m_Layer: 5
-  m_Name: GetButton
+  m_Name: GetButton0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11837,7 +11886,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1967467784}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372980560}
+        m_TargetAssemblyTypeName: UIUpdater, Assembly-CSharp
+        m_MethodName: LevelUp
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1967467784
 MonoBehaviour:
   m_ObjectHideFlags: 0

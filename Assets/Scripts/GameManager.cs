@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     {
         EventManager.AddListener("AcornGrabbed", UpdateAcorns);
         EventManager.AddListener("BoughtSquirrel", BoughtSquirrel);
+        EventManager.AddListener("LevelUp", LevelUp);
     }
-
     private void UpdateAcorns()
     {
         currentAcorns += 1;
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     private void LevelUp()
     {
         currentLevel += 1;
-        EventManager.TriggerEvent("LevelUp");
+        EventManager.TriggerEvent("LevelUpTree");
     }
 
     private void BoughtSquirrel(object squirrel)

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TreeSquirrel
   m_EditorClassIdentifier: 
   description: Clicks the trees and gets you acorns!
-  defaultPrice: 1000
+  defaultPrice: 250
   squirrel: {fileID: 8478270783176998636, guid: 8088b08350e4801419fe069105a2dac6,
     type: 3}
   color: {r: 0.47749776, g: 0.9716981, b: 0.46293163, a: 1}

@@ -31,6 +31,15 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] Image treeButtonImage;
     [SerializeField] TextMeshProUGUI totalAcorns;
     [SerializeField] Slider[] fillBars;
+    [SerializeField] GameObject[] getButtons;
+    private bool[] availableToLevelUp = new bool[4];
+    private bool[] usedLevelUp = new bool[4];
+    [SerializeField] Sprite greenGetSprite;
+    [SerializeField] Sprite grayGetSprite;
+    [SerializeField] int capLevel1;
+    [SerializeField] int capLevel2;
+    [SerializeField] int capLevel3;
+    [SerializeField] int capLevel4;
 
     [Header("Menus")]
     GraphicRaycaster raycaster;
@@ -45,9 +54,16 @@ public class UIUpdater : MonoBehaviour
             squirrelQuantity[i] = 1;
             squirrelPrices[i] = squirrels[i].defaultPrice;
         }
+
+        for(int i = 0;i < 4; i++)
+        {
+            availableToLevelUp[i] = false;
+            availableToLevelUp[i] = false;
+        }
+
         EventManager.AddListener("UpdateAcornUI", UpdateAcorns);
         EventManager.AddListener("UpdateAcornUI", UpdateAmountOfAcorns);
-        EventManager.AddListener("LevelUp", UpdateShopSquirrels);
+        EventManager.AddListener("LevelUpTree", UpdateShopSquirrels);
         eventSystem = GetComponent<EventSystem>();
         raycaster = gameObject.GetComponent<GraphicRaycaster>();
 
@@ -66,11 +82,31 @@ public class UIUpdater : MonoBehaviour
     {
         totalAcorns.text = "TOTAL ACORNS: " + GameManager.acornsGrabbed.ToString();
         fillBars[0].value = (float)GameManager.acornsGrabbed / 750;
-        fillBars[1].value = (float)GameManager.acornsGrabbed / 10000;
-        fillBars[2].value = (float)GameManager.acornsGrabbed / 250000;
-        fillBars[3].value = (float)GameManager.acornsGrabbed / 5000000;
+
+        if (GameManager.acornsGrabbed / capLevel1 >= 1.0f && !usedLevelUp[0] && !availableToLevelUp[0])
+            LevelUpButtonAvailable(0);
+
+        fillBars[1].value = (float)GameManager.acornsGrabbed / 5000;
+
+        if (GameManager.acornsGrabbed / capLevel2 >= 1.0f && !usedLevelUp[1] && !availableToLevelUp[1])
+            LevelUpButtonAvailable(1);
+
+        fillBars[2].value = (float)GameManager.acornsGrabbed / 25000;
+
+        if (GameManager.acornsGrabbed / capLevel3 >= 1.0f && !usedLevelUp[2] && !availableToLevelUp[2])
+            LevelUpButtonAvailable(2);
+
+        fillBars[3].value = (float)GameManager.acornsGrabbed / 100000;
+
+        if (GameManager.acornsGrabbed / capLevel4 >= 1.0f && !usedLevelUp[3] && !availableToLevelUp[3])
+            LevelUpButtonAvailable(3);
     }
 
+    private void LevelUpButtonAvailable(int index)
+    {
+        getButtons[index].GetComponent<Image>().sprite = greenGetSprite;
+        availableToLevelUp[index] = true;
+    }    
     private void CheckForMenus()
     {
         //If we do we get the position of our mouse on screen
@@ -269,6 +305,17 @@ public class UIUpdater : MonoBehaviour
                 child.GetComponent<TextMeshProUGUI>().text = squirrelQuantity[index].ToString();
                 break;
             }
+        }
+    }
+
+    public void LevelUp(int index)
+    {
+        if (availableToLevelUp[index])
+        {
+            getButtons[index].GetComponent<Image>().sprite = grayGetSprite;
+            EventManager.TriggerEvent("LevelUp");
+            usedLevelUp[index] = true;
+            availableToLevelUp[index] = false;
         }
     }
 }
