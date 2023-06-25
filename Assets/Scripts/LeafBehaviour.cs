@@ -10,8 +10,15 @@ public class LeafBehaviour : MonoBehaviour
         EventManager.AddListener("Clicked", AcornAnim);
     }
 
-    private void AcornAnim()
+    private void AcornAnim(object name)
     {
-        animator.Play("Leaves1AcornAnim");
+        StartCoroutine(PlayAnimation("TakingAcorn"));
+    }
+
+    private IEnumerator PlayAnimation(string name)
+    {
+        animator.SetBool(name, true);
+        yield return new WaitForSeconds(0.35f);
+        animator.SetBool(name, false);
     }
 }
