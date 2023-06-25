@@ -18,12 +18,12 @@ public class TreeGame : MonoBehaviour
     private Animator animator;
 
     //Pooling
-    public IObjectPool<GameObject> acornPool { get; set; }
+    public static IObjectPool<GameObject> acornPool { get; set; }
 
     private void Awake()
     {
         acornPool = new UnityEngine.Pool.ObjectPool<GameObject>(SpawnAcorn, OnTakeFromPool, OnReturnedToPool,
-          OnDestroyPoolObject, true, 100, 100000);
+              OnDestroyPoolObject, true, 100, 100000);
         animator = GetComponent<Animator>();
     }
     private void Start()
