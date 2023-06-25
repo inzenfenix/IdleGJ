@@ -2370,9 +2370,9 @@ MonoBehaviour:
     type: 3}
   grayGetSprite: {fileID: -3744784648759165299, guid: 6b87f03066c35e945b89645d81ee68a5,
     type: 3}
-  capLevel1: 500
-  capLevel2: 2500
-  capLevel3: 7500
+  capLevel1: 250
+  capLevel2: 1000
+  capLevel3: 5000
   capLevel4: 15000
 --- !u!1 &405282721
 GameObject:
