@@ -62,7 +62,7 @@ public class CameraBehaviour : MonoBehaviour
     {
         Vector3 originalScale = squirrel.localScale;
         agent.updatePosition = false;
-        squirrel.localScale *= 1.25f;
+        //squirrel.localScale *= 1.25f;
         Vector2 mousePos;
         Vector3 squirrelPos;
         while (PlayerInput._Instance.OnHoldClick())
