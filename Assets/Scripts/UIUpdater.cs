@@ -272,7 +272,7 @@ public class UIUpdater : MonoBehaviour
             }
         }
 
-        squirrelPrices[index] = (int)Mathf.Pow(squirrelPrices[index],1.15f);
+        squirrelPrices[index] = (int)Mathf.Pow(squirrelPrices[index],1.05f);
         UpdateShopSingleSquirrel(buyableSquirrels[index], squirrel);
         UpdateAcorns();
     }
