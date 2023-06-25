@@ -23,6 +23,12 @@ public class GameManager : MonoBehaviour
         EventManager.TriggerEvent("UpdateAcornUI", currentAcorns);
     }
 
+    private void LevelUp()
+    {
+        currentLevel += 1;
+        EventManager.TriggerEvent("LevelUp");
+    }
+
     private void BoughtSquirrel(object squirrel)
     {
         Squirrels curSquirrel = (Squirrels)squirrel;

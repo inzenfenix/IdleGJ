@@ -44,6 +44,7 @@ public class UIUpdater : MonoBehaviour
             squirrelPrices[i] = squirrels[i].defaultPrice;
         }
         EventManager.AddListener("UpdateAcornUI", UpdateAcorns);
+        EventManager.AddListener("LevelUp", UpdateShopSquirrels);
         eventSystem = GetComponent<EventSystem>();
         raycaster = gameObject.GetComponent<GraphicRaycaster>();
 
