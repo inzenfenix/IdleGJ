@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82c921c83414f2a46b1f683910ca43a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2
+  radius: 2.75
   followRadius: 10
   agent: {fileID: 5560991222276189012}
   squirrelAnimator: {fileID: 363323536452150348}
