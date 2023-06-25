@@ -12,6 +12,6 @@ public class LeafBehaviour : MonoBehaviour
 
     private void AcornAnim()
     {
-        animator.Play("cum");
+        animator.Play("Leaves1AcornAnim");
     }
 }
