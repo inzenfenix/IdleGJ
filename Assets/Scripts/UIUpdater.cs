@@ -287,7 +287,6 @@ public class UIUpdater : MonoBehaviour
             Debug.Log(child.name);
             if(child.name == "Quantity")
             {
-                Debug.Log(squirrelQuantity[index]);
                 child.GetComponent<TextMeshProUGUI>().text = squirrelQuantity[index].ToString();
                 break;
             }
