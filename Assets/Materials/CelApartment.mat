@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4873291496697836291
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CelApartment
+  m_Shader: {fileID: -6465566751694194690, guid: f46a205bbd9a55641adf596b1ccfbe85,
+    type: 3}
+  m_Parent: {fileID: 2100000, guid: cfbdb16b32f9acb4899c023b6d9707c6, type: 2}
+  m_ModifiedSerializedProperties: 12
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _Ambient_Strength: 0.08
+    - _Falloff_Amount: 1.6
+    - _Fresnel_Size: 0.05
+    - _Lightning_Cutoff: 0.38
+    - _Smoothness: 61.59
+    m_Colors:
+    - _Diffuse_Color: {r: 0.3254272, g: 0.6698113, b: 0.37487164, a: 0}
+    - _Fresnel_Color: {r: 0.5660378, g: 0.49914947, b: 0.21092917, a: 0}
+    - _Specular_Color: {r: 0.764151, g: 0.61075556, b: 0.378471, a: 0}
+  m_BuildTextureStacks: []
