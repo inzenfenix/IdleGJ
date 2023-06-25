@@ -9,12 +9,18 @@ public class GameManager : MonoBehaviour
     public static int currentLevel = 0;
     public static int acornsGrabbed = 0;
     [SerializeField] Transform buyPoint;
+    [SerializeField] int debugAcorns;
 
     private void Start()
     {
         EventManager.AddListener("AcornGrabbed", UpdateAcorns);
         EventManager.AddListener("BoughtSquirrel", BoughtSquirrel);
         EventManager.AddListener("LevelUp", LevelUp);
+    }
+
+    private void Update()
+    {
+        acornsGrabbed = debugAcorns;
     }
     private void UpdateAcorns()
     {
