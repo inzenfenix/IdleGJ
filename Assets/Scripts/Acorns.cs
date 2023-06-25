@@ -29,7 +29,7 @@ public class Acorns : MonoBehaviour
     private void Update()
     {
         if(transform.position.y < -10f)
-            Destroy(gameObject);
+            ReleaseObject();
     }
 
     private void DestroyAcorn(object name)
