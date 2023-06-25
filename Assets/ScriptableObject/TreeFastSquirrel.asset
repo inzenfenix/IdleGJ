@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5321672716de8184ca99a6079306c402, type: 3}
   m_Name: TreeFastSquirrel
   m_EditorClassIdentifier: 
-  description: A faster version of prior squirrel!
+  description: GETS A LOTTA ACORN FROM TREES
   defaultPrice: 1500
   squirrel: {fileID: 8478270783176998636, guid: 3626e4d93b940cf429e6bd3b54d9b36c,
     type: 3}
   color: {r: 0.15204157, g: 0.3679245, b: 0.1440459, a: 1}
-  requiredLevel: 0
+  requiredLevel: 3
   index: 3

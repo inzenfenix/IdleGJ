@@ -135,7 +135,7 @@ public class UIUpdater : MonoBehaviour
 
     public void OnNextSquirrelsPress()
     {
-        if (currentIndexSquirrels > squirrels.Length && GameManager.currentLevel < (int)(currentIndexSquirrels/4))
+        if (currentIndexSquirrels > squirrels.Length || GameManager.currentLevel < (int)((currentIndexSquirrels+4)/4))
             return;
         currentIndexSquirrels += 4;
         UpdateShopSquirrels();
@@ -152,7 +152,7 @@ public class UIUpdater : MonoBehaviour
 
     private void UpdateShopSquirrels()
     {
-        for(int i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++)
         {
             if (i + currentIndexSquirrels == squirrels.Length)
                 break;
@@ -162,7 +162,7 @@ public class UIUpdater : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
-            foreach(Transform item in buyableSquirrels[i].transform)
+            foreach (Transform item in buyableSquirrels[i].transform)
             {
                 if (item.name == "Description")
                     if (item.GetComponent<TextMeshProUGUI>().text == "Sample text")
@@ -171,7 +171,7 @@ public class UIUpdater : MonoBehaviour
                         buyableSquirrels[i].SetActive(true);
             }
 
-            if(squirrels.Length - 1 < i + currentIndexSquirrels)
+            if (squirrels.Length - 1 < i + currentIndexSquirrels || squirrels[i + currentIndexSquirrels].requiredLevel > GameManager.currentLevel )
                 buyableSquirrels[i].SetActive(false);
         }
     }

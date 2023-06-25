@@ -582,7 +582,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1137236133}
   m_HandleRect: {fileID: 0}
@@ -2347,8 +2347,8 @@ MonoBehaviour:
   - {fileID: 963456827}
   squirrels:
   - {fileID: 11400000, guid: e51ebc9089980db49a7317f314592be8, type: 2}
-  - {fileID: 11400000, guid: f56d4a86ec4b8a34ca347bf44abfdaee, type: 2}
   - {fileID: 11400000, guid: 8779fe03dab030047b8bdf42c4fc7cf2, type: 2}
+  - {fileID: 11400000, guid: f56d4a86ec4b8a34ca347bf44abfdaee, type: 2}
   - {fileID: 11400000, guid: eaa366a868d75a64eba7edf92912a439, type: 2}
   treeClick: {fileID: -3439451003447242159, guid: 284bac355cf702143a4aed6d63a4b789,
     type: 3}
@@ -3608,8 +3608,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -3.3250122, y: 0}
-  m_SizeDelta: {x: -23.35, y: 0}
+  m_AnchoredPosition: {x: -3.1500092, y: 0}
+  m_SizeDelta: {x: -23.700008, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &533876530
 GameObject:
@@ -4089,7 +4089,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 46682950}
   m_HandleRect: {fileID: 0}
@@ -5768,8 +5768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -3.3250122, y: 0}
-  m_SizeDelta: {x: -23.35, y: 0}
+  m_AnchoredPosition: {x: -3.1500092, y: 0}
+  m_SizeDelta: {x: -23.700031, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &907746515
 GameObject:
@@ -7335,8 +7335,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -3.3250122, y: 0}
-  m_SizeDelta: {x: -23.35, y: 0}
+  m_AnchoredPosition: {x: -3.1500092, y: 0}
+  m_SizeDelta: {x: -23.700008, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1174595270 stripped
 Transform:
@@ -10023,7 +10023,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1655260152}
   m_HandleRect: {fileID: 0}
@@ -11278,8 +11278,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -3.3250122, y: 0}
-  m_SizeDelta: {x: -23.35, y: 0}
+  m_AnchoredPosition: {x: -3.1500092, y: 0}
+  m_SizeDelta: {x: -23.700008, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1918398927
 GameObject:
@@ -11483,7 +11483,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1377073103}
   m_HandleRect: {fileID: 0}
