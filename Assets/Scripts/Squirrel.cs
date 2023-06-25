@@ -36,12 +36,14 @@ public class Squirrel : MonoBehaviour
 
     private void FollowAcornsAndTrees()
     {
-        Collider[] colliders = Physics.OverlapSphere(this.transform.position, followRadius);
-        foreach (Collider collider in colliders)
-        {
+        Collider[] colliders = Physics.OverlapSphere(this.transform.position, followRadius, 1 << 10);
+        if (colliders.Length == 0)
+            return;
+
+        Collider collider = colliders[Random.Range(0, colliders.Length)];
             if (collider.gameObject.activeInHierarchy)
             {
-                if (collider.gameObject.layer == 10 && !followingAcorn)
+                if (!followingAcorn)
                 {
                     agent.destination = collider.transform.position;
                     StartCoroutine(FollowAcorn(collider.gameObject));
@@ -55,7 +57,6 @@ public class Squirrel : MonoBehaviour
             }
             else
                 return;
-        }
     }
 
     IEnumerator FollowAcorn(GameObject acorn)
