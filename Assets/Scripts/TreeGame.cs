@@ -13,6 +13,7 @@ public class TreeGame : MonoBehaviour
     [SerializeField] GameObject acorn;
     //Spawn points
     Vector3[] spawnPos = new Vector3[2];
+    [SerializeField] int acornRate = 1;
     private bool spawning = false;
     private Animator animator;
 
@@ -45,10 +46,13 @@ public class TreeGame : MonoBehaviour
     }
     private void ThrowAcorn(object name)
     {
-        string objName = (string)name;
-        if(!spawning && objName == this.name)
+        for (int i = 0; i < acornRate; i++)
         {
-            StartCoroutine(SpawnAcorns());
+            string objName = (string)name;
+            if (!spawning && objName == this.name)
+            {
+                StartCoroutine(SpawnAcorns());
+            }
         }
         
     }
