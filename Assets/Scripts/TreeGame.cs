@@ -14,6 +14,7 @@ public class TreeGame : MonoBehaviour
     //Spawn points
     Vector3[] spawnPos = new Vector3[2];
     [SerializeField] int acornRate = 1;
+    [SerializeField] string treeName;
     private bool spawning = false;
     private Animator animator;
 
@@ -29,7 +30,7 @@ public class TreeGame : MonoBehaviour
     private void Start()
     {
         //We give a random name to the tree
-        this.name = $"Tree{Random.value * Random.Range(5, 1000000)}";
+        this.name = treeName;
         //We add a listener so if the user clicks this tree, we activate the function
         EventManager.AddListener("Clicked", ThrowAcorn);
         spawnPos[0] = this.transform.position + new Vector3(1.25f, 1, 0);

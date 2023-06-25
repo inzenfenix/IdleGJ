@@ -497,6 +497,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7409344994856578392, guid: 0304bfdb395e97845b9e02e6209fd1f4,
+        type: 3}
+      propertyPath: treeName
+      value: Tree V1 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -976,6 +981,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7409344994856578392, guid: 0304bfdb395e97845b9e02e6209fd1f4,
+        type: 3}
+      propertyPath: treeName
+      value: Tree V1 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1363,6 +1373,12 @@ Transform:
 --- !u!4 &182167914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 680561090927697579, guid: 3e33692b2d12b1d42b249762326c43b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 6370192904038124937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &182167915 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4017622612373258703, guid: 3e33692b2d12b1d42b249762326c43b9,
     type: 3}
   m_PrefabInstance: {fileID: 6370192904038124937}
   m_PrefabAsset: {fileID: 0}
@@ -4756,6 +4772,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7409344994856578392, guid: 0304bfdb395e97845b9e02e6209fd1f4,
+        type: 3}
+      propertyPath: treeName
+      value: Tree V1 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7847,6 +7868,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7409344994856578392, guid: 0304bfdb395e97845b9e02e6209fd1f4,
+        type: 3}
+      propertyPath: treeName
+      value: Tree V1 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9688,6 +9714,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7409344994856578392, guid: 0304bfdb395e97845b9e02e6209fd1f4,
+        type: 3}
+      propertyPath: treeName
+      value: Tree V1 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10204,6 +10235,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1286834272845546264, guid: 9d01c9f645ede984caa969f51ddf4fc0,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286834272845546264, guid: 9d01c9f645ede984caa969f51ddf4fc0,
+        type: 3}
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
@@ -10297,6 +10333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acorn: {fileID: 137127107}
   acornRate: 2
+  treeName: 
 --- !u!1 &1594205452
 GameObject:
   m_ObjectHideFlags: 0
@@ -13530,6 +13567,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1515867996}
     m_Modifications:
+    - target: {fileID: -7858958058184393184, guid: 3e33692b2d12b1d42b249762326c43b9,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 182167915}
     - target: {fileID: 680561090927697579, guid: 3e33692b2d12b1d42b249762326c43b9,
         type: 3}
       propertyPath: m_RootOrder
@@ -13667,6 +13709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409344994856578392, guid: 0304bfdb395e97845b9e02e6209fd1f4,
+        type: 3}
+      propertyPath: treeName
+      value: Tree V1 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
