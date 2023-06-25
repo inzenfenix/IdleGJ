@@ -81,22 +81,22 @@ public class UIUpdater : MonoBehaviour
     private void UpdateAmountOfAcorns()
     {
         totalAcorns.text = "TOTAL ACORNS: " + GameManager.acornsGrabbed.ToString();
-        fillBars[0].value = (float)GameManager.acornsGrabbed / 750;
+        fillBars[0].value = (float)GameManager.acornsGrabbed / capLevel1;
 
         if (GameManager.acornsGrabbed / capLevel1 >= 1.0f && !usedLevelUp[0] && !availableToLevelUp[0])
             LevelUpButtonAvailable(0);
 
-        fillBars[1].value = (float)GameManager.acornsGrabbed / 5000;
+        fillBars[1].value = (float)GameManager.acornsGrabbed / capLevel2;
 
         if (GameManager.acornsGrabbed / capLevel2 >= 1.0f && !usedLevelUp[1] && !availableToLevelUp[1])
             LevelUpButtonAvailable(1);
 
-        fillBars[2].value = (float)GameManager.acornsGrabbed / 25000;
+        fillBars[2].value = (float)GameManager.acornsGrabbed / capLevel3;
 
         if (GameManager.acornsGrabbed / capLevel3 >= 1.0f && !usedLevelUp[2] && !availableToLevelUp[2])
             LevelUpButtonAvailable(2);
 
-        fillBars[3].value = (float)GameManager.acornsGrabbed / 100000;
+        fillBars[3].value = (float)GameManager.acornsGrabbed / capLevel4;
 
         if (GameManager.acornsGrabbed / capLevel4 >= 1.0f && !usedLevelUp[3] && !availableToLevelUp[3])
             LevelUpButtonAvailable(3);
@@ -252,13 +252,16 @@ public class UIUpdater : MonoBehaviour
 
     public void BoughtSquirrel(Squirrels squirrel, int index)
     {
-        if (squirrelPrices[index] > GameManager.currentAcorns)
+        if (squirrelPrices[index] * squirrelQuantity[index] > GameManager.currentAcorns)
         {
             return;
         }    
 
         for(int i = 0; i < squirrelQuantity[index]; i++)
             EventManager.TriggerEvent("BoughtSquirrel", squirrel);
+
+        GameManager.currentAcorns -= squirrelPrices[index] * squirrelQuantity[index];
+
         squirrelQuantity[index] = 1;
         foreach (Transform child in buyableSquirrels[index].transform)
         {
@@ -269,7 +272,6 @@ public class UIUpdater : MonoBehaviour
             }
         }
 
-        GameManager.currentAcorns -= squirrelPrices[index];
         squirrelPrices[index] = (int)Mathf.Pow(squirrelPrices[index],1.15f);
         UpdateShopSingleSquirrel(buyableSquirrels[index], squirrel);
         UpdateAcorns();
@@ -290,6 +292,9 @@ public class UIUpdater : MonoBehaviour
                 break;
             }
         }
+        buyableSquirrels[index].GetComponentInChildren<TextMeshProUGUI>().text = squirrels[index].description + " Price: " +
+                                                                  squirrelPrices[squirrels[index].index - currentIndexSquirrels] * 
+                                                                  squirrelQuantity[index] + " Acorns";
     }
 
     public void DecreaseAmountToBuy(int index)
@@ -306,6 +311,9 @@ public class UIUpdater : MonoBehaviour
                 break;
             }
         }
+        buyableSquirrels[index].GetComponentInChildren<TextMeshProUGUI>().text = squirrels[index].description + " Price: " +
+                                                                  squirrelPrices[squirrels[index].index - currentIndexSquirrels] *
+                                                                  squirrelQuantity[index] + " Acorns";
     }
 
     public void LevelUp(int index)
