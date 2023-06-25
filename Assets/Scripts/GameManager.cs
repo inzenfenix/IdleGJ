@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     {
         currentAcorns += 1;
         acornsGrabbed += 1;
-        EventManager.TriggerEvent("UpdateAcornUI", currentAcorns);
+        EventManager.TriggerEvent("UpdateAcornUI");
     }
 
     private void LevelUp()

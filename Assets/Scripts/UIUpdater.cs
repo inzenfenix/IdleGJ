@@ -29,6 +29,8 @@ public class UIUpdater : MonoBehaviour
     [SerializeField] Sprite treeClick;
     [SerializeField] Sprite treeDefaultSprite;
     [SerializeField] Image treeButtonImage;
+    [SerializeField] TextMeshProUGUI totalAcorns;
+    [SerializeField] Slider[] fillBars;
 
     [Header("Menus")]
     GraphicRaycaster raycaster;
@@ -44,6 +46,7 @@ public class UIUpdater : MonoBehaviour
             squirrelPrices[i] = squirrels[i].defaultPrice;
         }
         EventManager.AddListener("UpdateAcornUI", UpdateAcorns);
+        EventManager.AddListener("UpdateAcornUI", UpdateAmountOfAcorns);
         EventManager.AddListener("LevelUp", UpdateShopSquirrels);
         eventSystem = GetComponent<EventSystem>();
         raycaster = gameObject.GetComponent<GraphicRaycaster>();
@@ -57,6 +60,15 @@ public class UIUpdater : MonoBehaviour
         {
             CheckForMenus();
         }
+    }
+
+    private void UpdateAmountOfAcorns()
+    {
+        totalAcorns.text = "TOTAL ACORNS: " + GameManager.acornsGrabbed.ToString();
+        fillBars[0].value = (float)GameManager.acornsGrabbed / 750;
+        fillBars[1].value = (float)GameManager.acornsGrabbed / 10000;
+        fillBars[2].value = (float)GameManager.acornsGrabbed / 250000;
+        fillBars[3].value = (float)GameManager.acornsGrabbed / 5000000;
     }
 
     private void CheckForMenus()
@@ -79,9 +91,9 @@ public class UIUpdater : MonoBehaviour
         
     }
 
-    private void UpdateAcorns(object acornsSize)
+    private void UpdateAcorns()
     {
-        string currentAcorns = ((int)acornsSize).ToString();
+        string currentAcorns = (GameManager.currentAcorns).ToString();
         acorns.text = currentAcorns;
     }
 
@@ -224,7 +236,7 @@ public class UIUpdater : MonoBehaviour
         GameManager.currentAcorns -= squirrelPrices[index];
         squirrelPrices[index] = (int)Mathf.Pow(squirrelPrices[index],1.15f);
         UpdateShopSingleSquirrel(buyableSquirrels[index], squirrel);
-        UpdateAcorns(GameManager.currentAcorns);
+        UpdateAcorns();
     }
 
     public void AddAmountToBuy(int index)
