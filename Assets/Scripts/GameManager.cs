@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        //currentAcorns = debugAcorns;
         //acornsGrabbed = debugAcorns;
     }
     private void UpdateAcorns()

@@ -272,7 +272,7 @@ public class UIUpdater : MonoBehaviour
             }
         }
 
-        squirrelPrices[index] = (int)Mathf.Pow(squirrelPrices[index],1.1f + squirrelQuantity[index]/99 );
+        squirrelPrices[index] = (int)Mathf.Pow(squirrelPrices[index],1.1f + squirrelQuantity[index]/49.5f);
         UpdateShopSingleSquirrel(buyableSquirrels[index], squirrel);
         UpdateAcorns();
     }
@@ -284,7 +284,6 @@ public class UIUpdater : MonoBehaviour
         squirrelQuantity[index] += 1;
         foreach(Transform child in buyableSquirrels[index].transform)
         {
-            Debug.Log(child.name);
             if(child.name == "Quantity")
             {
                 child.GetComponent<TextMeshProUGUI>().text = squirrelQuantity[index].ToString();
