@@ -25,8 +25,9 @@ public class TreeGame : MonoBehaviour
 
     private void Awake()
     {
-        acornPool = new UnityEngine.Pool.ObjectPool<GameObject>(SpawnAcorn, OnTakeFromPool, OnReturnedToPool,
-              OnDestroyPoolObject, true, 100, 100000);
+        if(acornPool == null)
+            acornPool = new UnityEngine.Pool.ObjectPool<GameObject>(SpawnAcorn, OnTakeFromPool, OnReturnedToPool,
+                  OnDestroyPoolObject, true, 100, 100000);
         animator = GetComponent<Animator>();
         leaves = leavesObject.GetComponent<LeafBehaviour>();
     }
@@ -40,6 +41,11 @@ public class TreeGame : MonoBehaviour
         spawnPos[1] = this.transform.position + new Vector3(-1.25f, 1, 0);
     }
 
+    private void OnEnable()
+    {
+        this.name = treeName;
+    }
+
     private GameObject SpawnAcorn()
     {
         GameObject newAcorn = Instantiate(acorn, spawnPos[Random.Range(0, spawnPos.Length)],
@@ -50,11 +56,11 @@ public class TreeGame : MonoBehaviour
     }
     private void ThrowAcorn(object name)
     {
-            string objName = (string)name;
-            if (!spawning && objName == this.name)
-            {
+        string objName = (string)name;
+        if (!spawning && objName == this.name)
+        {
                 StartCoroutine(SpawnAcorns());
-            }        
+        }        
     }
 
     IEnumerator SpawnAcorns()
