@@ -11,8 +11,13 @@ public class LeafBehaviour : MonoBehaviour
     private void Start()
     {
         source = gameObject.GetComponent<AudioSource>();
+        EventManager.AddListener("Clicked", ThrowAcorn);
     }
-
+    private void ThrowAcorn(object name)
+    {
+        if ((string)name == this.name)
+            transform.parent.gameObject.GetComponent<TreeGame>().ThrowAcorn(transform.parent.name);
+    }
     public void AcornAnim()
     {
         StartCoroutine(PlayAnimation("TakingAcorn"));

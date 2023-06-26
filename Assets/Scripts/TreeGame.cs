@@ -58,7 +58,7 @@ public class TreeGame : MonoBehaviour
 
         return newAcorn;
     }
-    private void ThrowAcorn(object name)
+    public void ThrowAcorn(object name)
     {
         string objName = (string)name;
         if (!spawning && objName == this.name)
