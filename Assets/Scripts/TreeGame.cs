@@ -50,30 +50,30 @@ public class TreeGame : MonoBehaviour
     }
     private void ThrowAcorn(object name)
     {
-        for (int i = 0; i < acornRate; i++)
-        {
             string objName = (string)name;
             if (!spawning && objName == this.name)
             {
                 StartCoroutine(SpawnAcorns());
-            }
-        }
-        
+            }        
     }
 
     IEnumerator SpawnAcorns()
     {
-        animator.SetBool("TakingAcorn", true);
-        if(leaves.gameObject.activeInHierarchy)
-            leaves.AcornAnim();
-        //We use a coroutine to make time
-        acorn.name = $"acorn{Random.value * Random.Range(5,1000000)}";
-        spawning= true;
-        GameObject newAcorn = acornPool.Get();
-        newAcorn.transform.position = spawnPos[Random.Range(0, spawnPos.Length)];
-        yield return new WaitForSeconds(.25f);
-        spawning = false;
-        animator.SetBool("TakingAcorn", false);
+        for (int i = 0; i < acornRate; i++)
+        {
+            animator.SetBool("TakingAcorn", true);
+            if (leaves.gameObject.activeInHierarchy)
+                leaves.AcornAnim();
+            //We use a coroutine to make time
+            acorn.name = $"acorn{Random.value * Random.Range(5, 1000000)}";
+            spawning = true;
+            GameObject newAcorn = acornPool.Get();
+            newAcorn.transform.position = spawnPos[Random.Range(0, spawnPos.Length)];
+            yield return new WaitForSeconds(.25f);
+            spawning = false;
+            animator.SetBool("TakingAcorn", false);
+            yield return new WaitForEndOfFrame();
+        }
     }
 
     private void OnTakeFromPool(GameObject obj)
