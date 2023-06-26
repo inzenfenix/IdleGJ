@@ -26,6 +26,7 @@ public class TreesUpgrades : MonoBehaviour
                     {
                         if (child.name.Contains("V1"))
                             child.GetComponent<TreeGame>().acornRate += 1;
+
                         foreach(Transform grandChild in child)
                             if (grandChild.name == "LeavesV1")
                             {
