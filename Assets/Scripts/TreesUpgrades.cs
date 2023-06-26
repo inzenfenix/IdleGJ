@@ -28,7 +28,7 @@ public class TreesUpgrades : MonoBehaviour
                             if (grandChild.name == "LeavesV1")
                             {
                                 grandChild.gameObject.SetActive(true);
-                                return;
+                                break;
                             }
                     }
                 }

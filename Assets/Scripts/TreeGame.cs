@@ -64,7 +64,8 @@ public class TreeGame : MonoBehaviour
     IEnumerator SpawnAcorns()
     {
         animator.SetBool("TakingAcorn", true);
-        leaves.AcornAnim();
+        if(leaves.gameObject.activeInHierarchy)
+            leaves.AcornAnim();
         //We use a coroutine to make time
         acorn.name = $"acorn{Random.value * Random.Range(5,1000000)}";
         spawning= true;
