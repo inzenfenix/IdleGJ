@@ -20,6 +20,8 @@ public class TreeGame : MonoBehaviour
     private LeafBehaviour leaves;
     private bool spawning = false;
     private Animator animator;
+    [SerializeField] AudioClip[] audios;
+    private AudioSource source;
 
     //Pooling
     public static IObjectPool<GameObject> acornPool { get; set; }
@@ -31,6 +33,7 @@ public class TreeGame : MonoBehaviour
                   OnDestroyPoolObject, true, 100, 100000);
         animator = GetComponent<Animator>();
         leaves = leavesObject.GetComponent<LeafBehaviour>();
+        source = gameObject.GetComponent<AudioSource>();
     }
     private void Start()
     {
@@ -68,6 +71,9 @@ public class TreeGame : MonoBehaviour
     {
         for (int i = 0; i < acornRate; i++)
         {
+            source.clip = audios[Random.Range(0, audios.Length)];
+            source.Play();
+
             animator.SetBool("TakingAcorn", true);
             if (leaves.gameObject.activeInHierarchy)
                 leaves.AcornAnim();
