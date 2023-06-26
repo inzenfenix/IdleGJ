@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static int currentLevel = 0;
     public static int acornsGrabbed = 0;
     [SerializeField] Transform buyPoint;
-    [SerializeField] int debugAcorns;
+    //[SerializeField] int debugAcorns;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        acornsGrabbed = debugAcorns;
+        //acornsGrabbed = debugAcorns;
     }
     private void UpdateAcorns()
     {
