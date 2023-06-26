@@ -90,23 +90,23 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61d948255161af64e856e0fa9a701da5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 889003728383681523}
+      addedObject: {fileID: 181}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61d948255161af64e856e0fa9a701da5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -5519220524159087680}
+      addedObject: {fileID: 196}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61d948255161af64e856e0fa9a701da5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7166628426669996361}
+      addedObject: {fileID: 219}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61d948255161af64e856e0fa9a701da5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7765026657021406567}
+      addedObject: {fileID: 195}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61d948255161af64e856e0fa9a701da5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6313521425365044418}
+      addedObject: {fileID: 189}
   m_SourcePrefab: {fileID: 100100000, guid: 61d948255161af64e856e0fa9a701da5, type: 3}
 --- !u!1 &2904746242551430709 stripped
 GameObject:
@@ -114,7 +114,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2634274282106028900}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &889003728383681523
+--- !u!54 &181
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &-5519220524159087680
+--- !u!136 &196
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,7 +164,7 @@ CapsuleCollider:
   m_Height: 1.5509257
   m_Direction: 1
   m_Center: {x: 0, y: 0.087833434, z: 0}
---- !u!114 &7166628426669996361
+--- !u!114 &219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24eaa888cfe3f444483ff5c9e8bdbb23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &7765026657021406567
+--- !u!95 &195
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -197,7 +197,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!82 &6313521425365044418
+--- !u!82 &189
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

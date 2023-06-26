@@ -45,6 +45,7 @@ public class UIUpdater : MonoBehaviour
     GraphicRaycaster raycaster;
     EventSystem eventSystem;
     PointerEventData eventMouse;
+    [SerializeField] GameObject startMenu;
 
 
     private void Start()
@@ -323,5 +324,10 @@ public class UIUpdater : MonoBehaviour
             usedLevelUp[index] = true;
             availableToLevelUp[index] = false;
         }
+    }
+    
+    public void StartGame()
+    {
+        startMenu.SetActive(false);
     }
 }
