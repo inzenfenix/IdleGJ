@@ -11,8 +11,9 @@ public class Acorns : MonoBehaviour
     private bool clicked = false;
     private AudioSource source;
     [SerializeField] AudioClip[] clips;
+    [SerializeField] AudioClip[] grabClips;
 
-    
+
     private void Awake()
     {
         EventManager.AddListener("Clicked", DestroyAcorn);
@@ -50,6 +51,9 @@ public class Acorns : MonoBehaviour
     private IEnumerator DestroyTimed()
     {
         yield return new WaitForSeconds(0.6f);
+        source.clip = grabClips[Random.Range(0, grabClips.Length)];
+        source.Play();
+        yield return new WaitForSeconds(0.1f);
         animator.SetBool("GrabbedAcorn", false);
         ReleaseObject();
     }

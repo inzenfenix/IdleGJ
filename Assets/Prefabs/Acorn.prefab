@@ -180,6 +180,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 66431b5f9ecdf434ebabb0617bc649dd, type: 3}
   - {fileID: 8300000, guid: f723d2c7b284ae842bc28e7b27739973, type: 3}
   - {fileID: 8300000, guid: aad3e7721ff02ce478da06e32c90c11e, type: 3}
+  grabClips:
+  - {fileID: 8300000, guid: 6bbb8df659c7c72478aa5b7ff987bf4e, type: 3}
+  - {fileID: 8300000, guid: a198a0189c7558345971e8d225fd50ed, type: 3}
+  - {fileID: 8300000, guid: 9c52ccec1a32cfb49a01da4a45a8b92b, type: 3}
+  - {fileID: 8300000, guid: 7a1a567f341eb3f4390c5c1762af392b, type: 3}
+  - {fileID: 8300000, guid: 6a481abd562722e449a98384a3343a1f, type: 3}
+  - {fileID: 8300000, guid: cf919e16fbf3af54aa48415456373cbe, type: 3}
 --- !u!95 &195
 Animator:
   serializedVersion: 5
