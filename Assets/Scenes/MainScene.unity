@@ -13793,6 +13793,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7409344994856578392, guid: 0304bfdb395e97845b9e02e6209fd1f4,
         type: 3}
+      propertyPath: acornRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409344994856578392, guid: 0304bfdb395e97845b9e02e6209fd1f4,
+        type: 3}
       propertyPath: leavesObject
       value: 
       objectReference: {fileID: 2085709030}

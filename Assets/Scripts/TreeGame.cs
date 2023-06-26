@@ -13,7 +13,7 @@ public class TreeGame : MonoBehaviour
     [SerializeField] GameObject acorn;
     //Spawn points
     Vector3[] spawnPos = new Vector3[2];
-    [SerializeField] int acornRate = 1;
+    public int acornRate = 1;
     [SerializeField] string treeName;
     [SerializeField] GameObject leavesObject;
     private LeafBehaviour leaves;
