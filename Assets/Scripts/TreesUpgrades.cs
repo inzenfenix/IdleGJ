@@ -53,6 +53,22 @@ public class TreesUpgrades : MonoBehaviour
                 }
                 break;
 
+            case 3:
+                foreach (GameObject tree in trees)
+                {
+                    foreach (Transform child in tree.transform)
+                    {
+                        if (child.name.Contains("V2"))
+                        {
+                            child.GetComponent<TreeGame>().TakeDownTree();
+                        }
+
+                        if (child.name.Contains("V3"))
+                            child.gameObject.SetActive(true);
+                    }
+                }
+                break;
+
             default:
                 break;
         }

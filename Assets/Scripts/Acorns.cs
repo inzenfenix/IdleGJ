@@ -9,6 +9,7 @@ public class Acorns : MonoBehaviour
     public IObjectPool<GameObject> Pool { get; set; }
     private Animator animator;
     private bool clicked = false;
+    private AudioSource source;
 
     
     private void Awake()
