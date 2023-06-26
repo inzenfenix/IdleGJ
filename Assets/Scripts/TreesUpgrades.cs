@@ -6,6 +6,7 @@ using static Cinemachine.DocumentationSortingAttribute;
 public class TreesUpgrades : MonoBehaviour
 {
     [SerializeField] GameObject[] trees;
+    [SerializeField] GameObject buildings;
 
     private int currentLevel = 0;
 
@@ -67,6 +68,10 @@ public class TreesUpgrades : MonoBehaviour
                             child.gameObject.SetActive(true);
                     }
                 }
+                break;
+
+            case 4:
+                buildings.SetActive(true);
                 break;
 
             default:
