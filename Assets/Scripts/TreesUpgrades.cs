@@ -24,11 +24,12 @@ public class TreesUpgrades : MonoBehaviour
                 {
                     foreach(Transform child in tree.transform)
                     {
-                        if (child.name == "LeavesV1")
-                        {
-                            child.gameObject.SetActive(true);
-                            break;
-                        }
+                        foreach(Transform grandChild in child)
+                            if (grandChild.name == "LeavesV1")
+                            {
+                                grandChild.gameObject.SetActive(true);
+                                return;
+                            }
                     }
                 }
                 break;

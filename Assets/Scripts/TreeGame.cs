@@ -15,6 +15,8 @@ public class TreeGame : MonoBehaviour
     Vector3[] spawnPos = new Vector3[2];
     [SerializeField] int acornRate = 1;
     [SerializeField] string treeName;
+    [SerializeField] GameObject leavesObject;
+    private LeafBehaviour leaves;
     private bool spawning = false;
     private Animator animator;
 
@@ -26,6 +28,7 @@ public class TreeGame : MonoBehaviour
         acornPool = new UnityEngine.Pool.ObjectPool<GameObject>(SpawnAcorn, OnTakeFromPool, OnReturnedToPool,
               OnDestroyPoolObject, true, 100, 100000);
         animator = GetComponent<Animator>();
+        leaves = leavesObject.GetComponent<LeafBehaviour>();
     }
     private void Start()
     {
@@ -61,6 +64,7 @@ public class TreeGame : MonoBehaviour
     IEnumerator SpawnAcorns()
     {
         animator.SetBool("TakingAcorn", true);
+        leaves.AcornAnim();
         //We use a coroutine to make time
         acorn.name = $"acorn{Random.value * Random.Range(5,1000000)}";
         spawning= true;

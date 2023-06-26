@@ -5,12 +5,8 @@ using UnityEngine;
 public class LeafBehaviour : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    void Start()
-    {
-        EventManager.AddListener("Clicked", AcornAnim);
-    }
 
-    private void AcornAnim(object name)
+    public void AcornAnim()
     {
         StartCoroutine(PlayAnimation("TakingAcorn"));
     }
@@ -18,7 +14,7 @@ public class LeafBehaviour : MonoBehaviour
     private IEnumerator PlayAnimation(string name)
     {
         animator.SetBool(name, true);
-        yield return new WaitForSeconds(0.35f);
+        yield return new WaitForSeconds(.225f);
         animator.SetBool(name, false);
     }
 }
