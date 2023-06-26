@@ -37,6 +37,8 @@ public class CameraBehaviour : MonoBehaviour
             //If we hit something with the ray, we take OUT the information on hit
             if (Physics.Raycast(ray, out hit,10000, ~IgnoreMask))
             {
+                if(hit.transform.name == "Radio")
+                    EventManager.TriggerEvent("ChangedVolume");
                 if (hit.transform.gameObject.tag == "Interactable")
                 {
                     EventManager.TriggerEvent("Clicked", hit.transform.name);
