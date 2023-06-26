@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BankMat
+  m_Shader: {fileID: -6465566751694194690, guid: f46a205bbd9a55641adf596b1ccfbe85,
+    type: 3}
+  m_Parent: {fileID: 2100000, guid: cfbdb16b32f9acb4899c023b6d9707c6, type: 2}
+  m_ModifiedSerializedProperties: 12
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _Ambient_Strength: 0.41
+    - _Falloff_Amount: 0.61
+    - _Fresnel_Size: 0.31
+    - _Lightning_Cutoff: 0.46
+    - _Smoothness: 121.29
+    m_Colors:
+    - _Diffuse_Color: {r: 0.5377358, g: 0.47779658, b: 0.34242612, a: 0}
+    - _Fresnel_Color: {r: 1, g: 0.8365791, b: 0.4481132, a: 0}
+    - _Specular_Color: {r: 0.46226418, g: 0.40714768, b: 0.2551175, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &4232531031145106249
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

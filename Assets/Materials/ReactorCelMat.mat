@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4873291496697836291
+--- !u!114 &-8617401865828232322
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CelApartment
+  m_Name: ReactorCelMat
   m_Shader: {fileID: -6465566751694194690, guid: f46a205bbd9a55641adf596b1ccfbe85,
     type: 3}
   m_Parent: {fileID: 2100000, guid: cfbdb16b32f9acb4899c023b6d9707c6, type: 2}
@@ -28,8 +28,8 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
-  m_DoubleSidedGI: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
@@ -40,12 +40,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _Ambient_Strength: 0.08
-    - _Falloff_Amount: 1.6
-    - _Fresnel_Size: 0.05
-    - _Lightning_Cutoff: 0.38
-    - _Smoothness: 61.59
+    - _Falloff_Amount: 0.89
+    - _Fresnel_Size: 0.49
+    - _Lightning_Cutoff: 0.52
+    - _Smoothness: 151.2
     m_Colors:
-    - _Diffuse_Color: {r: 0.3254272, g: 0.6698113, b: 0.37487164, a: 0}
-    - _Fresnel_Color: {r: 0.5660378, g: 0.49914947, b: 0.21092917, a: 0}
-    - _Specular_Color: {r: 0.764151, g: 0.61075556, b: 0.378471, a: 0}
+    - _Diffuse_Color: {r: 0.735849, g: 0.583022, b: 0.5310609, a: 0}
+    - _Fresnel_Color: {r: 0.8113208, g: 0.692802, b: 0.5778747, a: 0}
+    - _Specular_Color: {r: 0.7169812, g: 0.5676443, b: 0.52420795, a: 0}
   m_BuildTextureStacks: []
