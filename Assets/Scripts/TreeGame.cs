@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Principal;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 using UnityEngine.Pool;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
@@ -82,6 +83,18 @@ public class TreeGame : MonoBehaviour
         }
     }
 
+    public void TakeDownTree()
+    {
+        animator.SetBool("ChangedTree", true);
+        leaves.TakeDownTree();
+        StartCoroutine(DownTree());
+    }
+
+    private IEnumerator DownTree()
+    {
+        yield return new WaitForSeconds(.4f);
+        gameObject.SetActive(false);
+    }
     private void OnTakeFromPool(GameObject obj)
     {
         obj.SetActive(true);

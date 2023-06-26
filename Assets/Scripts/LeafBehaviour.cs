@@ -11,6 +11,11 @@ public class LeafBehaviour : MonoBehaviour
         StartCoroutine(PlayAnimation("TakingAcorn"));
     }
 
+    public void TakeDownTree()
+    {
+        StartCoroutine(PlayAnimation("ChangedTree"));
+    }
+
     private IEnumerator PlayAnimation(string name)
     {
         animator.SetBool(name, true);
