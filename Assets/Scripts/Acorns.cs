@@ -10,11 +10,13 @@ public class Acorns : MonoBehaviour
     private Animator animator;
     private bool clicked = false;
     private AudioSource source;
+    [SerializeField] AudioClip[] clips;
 
     
     private void Awake()
     {
         EventManager.AddListener("Clicked", DestroyAcorn);
+        source = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
 
@@ -50,6 +52,15 @@ public class Acorns : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         animator.SetBool("GrabbedAcorn", false);
         ReleaseObject();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.transform.gameObject.layer == 18)
+        {
+            source.clip = clips[Random.Range(0, clips.Length)];
+            source.Play();
+        }
     }
 
     public void ReleaseObject() => Pool.Release(gameObject);

@@ -22,7 +22,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1914047814450649506
 Transform:
   m_ObjectHideFlags: 0
@@ -36,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3260548740217214471
 MeshFilter:
@@ -151,11 +151,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 1.985, y: 6.3770003, z: 3.35}
+  m_Extents: {x: 3.07, y: 6.3770003, z: 3.35}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: -1.189, y: 4.6270003, z: -0.28}
+  m_Center: {x: -0.01, y: 4.6270003, z: -0.28}
   m_TimeToStationary: 0.5
 --- !u!95 &6845969999402472935
 Animator:
