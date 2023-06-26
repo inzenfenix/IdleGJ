@@ -3769,12 +3769,6 @@ MonoBehaviour:
     type: 3}
   DDefault: {fileID: 1988809229639490599, guid: 1192333549d8b5247bdcb5eca53b9bd4,
     type: 3}
-  clips:
-  - {fileID: 8300000, guid: 0571b5704252af2418871083fcbc0674, type: 3}
-  - {fileID: 8300000, guid: 704cea4a8379eb44d87794f40c23a450, type: 3}
-  - {fileID: 8300000, guid: 8673c1857cb31d248b746add5bfa54fd, type: 3}
-  - {fileID: 8300000, guid: ac51e82209b573242823da59884a1e76, type: 3}
-  - {fileID: 8300000, guid: 6d1c7d97599ff4d4f8246d9f11a079f7, type: 3}
 --- !u!82 &330585550
 AudioSource:
   m_ObjectHideFlags: 0

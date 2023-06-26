@@ -7,6 +7,7 @@ using UnityEngine.InputSystem.HID;
 using UnityEngine.Pool;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
+using UnityEngine.VFX;
 
 public class TreeGame : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class TreeGame : MonoBehaviour
     private Animator animator;
     [SerializeField] AudioClip[] audios;
     private AudioSource source;
+
+    [SerializeField] VisualEffect spark;
 
     //Pooling
     public static IObjectPool<GameObject> acornPool { get; set; }
@@ -71,6 +74,7 @@ public class TreeGame : MonoBehaviour
     {
         for (int i = 0; i < acornRate; i++)
         {
+            spark.Play();
             source.clip = audios[Random.Range(0, audios.Length)];
             source.Play();
 

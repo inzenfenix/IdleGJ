@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.VFX;
 
 public class Acorns : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Acorns : MonoBehaviour
     private AudioSource source;
     [SerializeField] AudioClip[] clips;
     [SerializeField] AudioClip[] grabClips;
+
+    [SerializeField] VisualEffect vfx;
 
 
     private void Awake()
@@ -51,9 +54,10 @@ public class Acorns : MonoBehaviour
     private IEnumerator DestroyTimed()
     {
         yield return new WaitForSeconds(0.6f);
+        vfx.Play();
         source.clip = grabClips[Random.Range(0, grabClips.Length)];
         source.Play();
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         animator.SetBool("GrabbedAcorn", false);
         ReleaseObject();
     }
