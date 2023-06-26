@@ -20,21 +20,13 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField] Sprite ADefault;
     [SerializeField] Sprite DPressed;
     [SerializeField] Sprite DDefault;
-    private AudioSource source;
-    [SerializeField] AudioClip[] clips;
 
-    private void Start()
-    {
-        source = GetComponent<AudioSource>();
-    }
     private void Update()
     {
         buyPoint.position = new Vector3(transform.position.x, buyPoint.position.y, buyPoint.position.z);
         //We use the singleton to check if we press the left button of our mouse
         if (PlayerInput._Instance.OnClick())
         {
-            source.clip = clips[Random.Range(0, clips.Length)];
-            source.Play();
             //If we do we get the position of our mouse on screen
             Vector2 mousePos = Mouse.current.position.ReadValue();
             // create a hit which will tell us where the hit ended up in game space
