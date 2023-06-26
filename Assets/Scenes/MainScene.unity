@@ -3678,6 +3678,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16388
   buyPoint: {fileID: 911836333}
+  AKey: {fileID: 1041175745}
+  DKey: {fileID: 620579949}
+  APressed: {fileID: -3526556074287272412, guid: f178fd6dbce731148a756bcfadd8d9b5,
+    type: 3}
+  ADefault: {fileID: 8574352227578314032, guid: b8df43bfe85c74244bcde32a8e1b3d15,
+    type: 3}
+  DPressed: {fileID: 6461134047615624295, guid: 8d82bc097f98af749acc45ca00628b4d,
+    type: 3}
+  DDefault: {fileID: 1988809229639490599, guid: 1192333549d8b5247bdcb5eca53b9bd4,
+    type: 3}
 --- !u!1001 &331228760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11849,7 +11859,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyPoint: {fileID: 911836333}
-  debugAcorns: 2500000
 --- !u!4 &1190310099
 Transform:
   m_ObjectHideFlags: 0

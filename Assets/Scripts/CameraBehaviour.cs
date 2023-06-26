@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class CameraBehaviour : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField] LayerMask IgnoreMask;
     [SerializeField] Transform buyPoint;
     private bool pressingKey = false;
+    [SerializeField] Image AKey;
+    [SerializeField] Image DKey;
+    [SerializeField] Sprite APressed;
+    [SerializeField] Sprite ADefault;
+    [SerializeField] Sprite DPressed;
+    [SerializeField] Sprite DDefault;
 
     private void Update()
     {
@@ -108,10 +115,17 @@ public class CameraBehaviour : MonoBehaviour
         pressingKey = true;
         bool pressing;
         yield return new WaitForSeconds(.05f);
-        if(key == "A")
-                pressing = PlayerInput._Instance.OnHoldA();
+        if (key == "A")
+        {
+            pressing = PlayerInput._Instance.OnHoldA();
+            AKey.sprite = APressed;
+        }
         else
+        {
             pressing = PlayerInput._Instance.OnHoldD();
+            DKey.sprite = DPressed;
+        }
+        
         while (pressing)
         {
             if (key == "A")
@@ -124,6 +138,8 @@ public class CameraBehaviour : MonoBehaviour
             yield return new WaitForEndOfFrameUnit();
         }
         pressingKey = false;
+        DKey.sprite = DDefault;
+        AKey.sprite = ADefault;
     }
 
     public void OnHoveringSideExit()
