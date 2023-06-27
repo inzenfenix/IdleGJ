@@ -71,8 +71,6 @@ public class Squirrel : MonoBehaviour
         {
             agent.destination = acorn.transform.position;
             yield return new WaitForSeconds(.35f);
-            source.clip = clips[Random.Range(0, clips.Length)];
-            source.Play();
         }
         squirrelAnimator.SetBool("Walking", false);
         followingAcorn = false;

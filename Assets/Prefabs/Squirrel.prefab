@@ -190,7 +190,7 @@ MonoBehaviour:
   followRadius: 12.5
   agent: {fileID: 5560991222276189012}
   squirrelAnimator: {fileID: 363323536452150348}
-  source: {fileID: 8987374443733115870, guid: ed1554988a90bef428082077b1b8c578, type: 3}
+  source: {fileID: -7269363676236676816}
   clips:
   - {fileID: 8300000, guid: 047fe850f8d07874496f370bf13aef25, type: 3}
   - {fileID: 8300000, guid: 3f40e3a5f51745142808674a25035f32, type: 3}
