@@ -19,7 +19,7 @@ public class TreeGame : MonoBehaviour
     [SerializeField] string treeName;
     [SerializeField] GameObject leavesObject;
     private LeafBehaviour leaves;
-    private bool spawning = false;
+    public bool spawning = false;
     private Animator animator;
     [SerializeField] AudioClip[] audios;
     private AudioSource source;

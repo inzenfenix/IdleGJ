@@ -30,10 +30,9 @@ public class TreeSquirrel : MonoBehaviour
         if (!pickingAcorn)
         {
             Collider[] colliders = Physics.OverlapSphere(this.transform.position, radius, 1 << 11);
-            foreach (Collider collider in colliders)
-            {
-                StartCoroutine(PickedAcorn(collider.name));
-            }
+            if(colliders.Length > 0)
+                if(!colliders[0].GetComponent<TreeGame>().spawning)
+                    StartCoroutine(PickedAcorn(colliders[0].name));
         }
     }
 
@@ -70,7 +69,7 @@ public class TreeSquirrel : MonoBehaviour
     IEnumerator FollowTree(GameObject tree)
     {
         squirrelAnimator.SetBool("Walking", true);
-        while (Vector3.Distance(tree.transform.position,transform.position) > 4)
+        while (Vector3.Distance(tree.transform.position,transform.position) > radius)
         {
             yield return new WaitForSeconds(.25f);
         }
