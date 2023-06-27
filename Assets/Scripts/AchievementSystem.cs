@@ -6,7 +6,7 @@ using UnityEngine;
 public class AchievementSystem : MonoBehaviour
 {
     [SerializeField] GameObject textObject;
-    private TextMeshProUGUI text;
+    [SerializeField] TextMeshProUGUI text;
     private Animator animator;
     [SerializeField] AudioSource source;
     [SerializeField] AudioClip clip;
@@ -14,7 +14,6 @@ public class AchievementSystem : MonoBehaviour
     private void Start()
     {
         source.clip = clip;
-        text = textObject.GetComponent<TextMeshProUGUI>();
         animator = textObject.GetComponent<Animator>();
         EventManager.AddListener("Achievement", Achievement);
     }
