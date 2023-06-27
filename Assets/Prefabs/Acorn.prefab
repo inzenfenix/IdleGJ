@@ -94,23 +94,23 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61d948255161af64e856e0fa9a701da5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 181}
+      addedObject: {fileID: 250}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61d948255161af64e856e0fa9a701da5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 196}
+      addedObject: {fileID: 268}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61d948255161af64e856e0fa9a701da5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 219}
+      addedObject: {fileID: 294}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61d948255161af64e856e0fa9a701da5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 195}
+      addedObject: {fileID: 263}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61d948255161af64e856e0fa9a701da5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 189}
+      addedObject: {fileID: 258}
   m_SourcePrefab: {fileID: 100100000, guid: 61d948255161af64e856e0fa9a701da5, type: 3}
 --- !u!4 &2523260429218473103 stripped
 Transform:
@@ -124,7 +124,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2634274282106028900}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &181
+--- !u!54 &250
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,7 +151,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &196
+--- !u!136 &268
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,7 +174,7 @@ CapsuleCollider:
   m_Height: 1.5509257
   m_Direction: 1
   m_Center: {x: 0, y: 0.087833434, z: 0}
---- !u!114 &219
+--- !u!114 &294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,7 +198,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6a481abd562722e449a98384a3343a1f, type: 3}
   - {fileID: 8300000, guid: cf919e16fbf3af54aa48415456373cbe, type: 3}
   vfx: {fileID: 4302705511019967538}
---- !u!95 &195
+--- !u!95 &263
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!82 &189
+--- !u!82 &258
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
