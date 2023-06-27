@@ -86,7 +86,7 @@ public class TreeGame : MonoBehaviour
             spawning = true;
             GameObject newAcorn = acornPool.Get();
             newAcorn.transform.position = spawnPos[Random.Range(0, spawnPos.Length)];
-            yield return new WaitForSeconds(.3f);
+            yield return new WaitForSeconds(.2f);
             spawning = false;
             animator.SetBool("TakingAcorn", false);
             yield return new WaitForEndOfFrame();
