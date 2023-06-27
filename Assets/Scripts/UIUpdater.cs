@@ -180,6 +180,8 @@ public class UIUpdater : MonoBehaviour
             menuTree.SetActive(true);
         else
             menuTree.SetActive(false);
+
+        StartCoroutine(ChangeSprite(treeButtonImage, treeDefaultSprite));
     }
 
     public void HoverTreeMenuExit()

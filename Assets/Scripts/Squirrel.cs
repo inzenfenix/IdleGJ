@@ -11,6 +11,9 @@ public class Squirrel : MonoBehaviour
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Animator squirrelAnimator;
 
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip[] clips;
+
     private bool followingAcorn = false;
 
 
@@ -47,7 +50,8 @@ public class Squirrel : MonoBehaviour
                 {
                     agent.destination = collider.transform.position;
                     StartCoroutine(FollowAcorn(collider.gameObject));
-                    if(collider.transform.position.x < transform.position.x)
+                    StartCoroutine(FootSteps(collider.gameObject));
+                    if (collider.transform.position.x < transform.position.x)
                     {
                         transform.rotation = Quaternion.Euler(0, 180, 0);
                     }
@@ -66,10 +70,22 @@ public class Squirrel : MonoBehaviour
         while(acorn.activeInHierarchy)
         {
             agent.destination = acorn.transform.position;
-            yield return new WaitForSeconds(.25f);
+            yield return new WaitForSeconds(.35f);
+            source.clip = clips[Random.Range(0, clips.Length)];
+            source.Play();
         }
         squirrelAnimator.SetBool("Walking", false);
         followingAcorn = false;
+    }
+
+    IEnumerator FootSteps(GameObject acorn)
+    {
+        while (acorn.activeInHierarchy)
+        {
+            source.clip = clips[Random.Range(0, clips.Length)];
+            source.Play();
+            yield return new WaitForSeconds(.05f);
+        }
     }
 
     private void OnDrawGizmos()
