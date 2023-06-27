@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acorn: {fileID: 2904746242551430709, guid: 4c015b6f09c1b304b9de1417b0a7c852, type: 3}
-  acornRate: 3
+  acornRate: 2
   treeName: Tree V2 1
   leavesObject: {fileID: 0}
   audios:

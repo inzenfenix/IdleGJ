@@ -48,8 +48,11 @@ public class TreeSquirrel : MonoBehaviour
     private void GoToTrees()
     {
         Collider[] colliders = Physics.OverlapSphere(this.transform.position, followRadius);
-        foreach (Collider collider in colliders)
-        {
+        if (colliders.Length == 0)
+            return;
+
+        Collider collider = colliders[Random.Range(0, colliders.Length)];
+
             if (collider.gameObject.layer == 11)
             {
                 agent.destination = collider.transform.position;
@@ -62,7 +65,6 @@ public class TreeSquirrel : MonoBehaviour
                 else
                     transform.rotation = Quaternion.Euler(0, 0, 0);
             }
-        }
     }
 
     IEnumerator FollowTree(GameObject tree)
