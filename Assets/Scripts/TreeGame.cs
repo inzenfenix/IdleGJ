@@ -33,7 +33,7 @@ public class TreeGame : MonoBehaviour
     {
         if(acornPool == null)
             acornPool = new UnityEngine.Pool.ObjectPool<GameObject>(SpawnAcorn, OnTakeFromPool, OnReturnedToPool,
-                  OnDestroyPoolObject, true, 100, 100000);
+                  OnDestroyPoolObject, true, 25, 1000);
         animator = GetComponent<Animator>();
         leaves = leavesObject.GetComponent<LeafBehaviour>();
         source = gameObject.GetComponent<AudioSource>();
