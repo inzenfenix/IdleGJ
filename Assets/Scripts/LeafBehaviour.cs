@@ -28,6 +28,12 @@ public class LeafBehaviour : MonoBehaviour
         StartCoroutine(PlayAnimation("ChangedTree"));
     }
 
+    public void PlayAudio()
+    {
+        source.clip = audios[Random.Range(0, audios.Length)];
+        source.Play();
+    }
+
     private IEnumerator PlayAnimation(string name)
     {
         source.clip = audios[Random.Range(0, audios.Length)];

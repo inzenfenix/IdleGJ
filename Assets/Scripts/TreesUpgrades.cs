@@ -18,7 +18,11 @@ public class TreesUpgrades : MonoBehaviour
     private void LevelUp()
     {
         currentLevel += 1;
-        switch(currentLevel)
+        if(currentLevel >= 1 && currentLevel < 4)
+            EventManager.TriggerEvent("Achievement", $"Congrats! You are now Level {currentLevel}");
+        if(currentLevel == 4)
+            EventManager.TriggerEvent("Achievement", $"Congrats! You have finished the game and created THE SQUIRREL SOCIETY!");
+        switch (currentLevel)
         {
             case 1:
                 foreach(GameObject tree in trees)
@@ -29,9 +33,10 @@ public class TreesUpgrades : MonoBehaviour
                             child.GetComponent<TreeGame>().acornRate += 1;
 
                         foreach(Transform grandChild in child)
-                            if (grandChild.name == "LeavesV1")
+                            if (grandChild.name.Contains("LeavesV1"))
                             {
                                 grandChild.gameObject.SetActive(true);
+                                grandChild.gameObject.GetComponent<LeafBehaviour>().PlayAudio();
                                 break;
                             }
                     }
