@@ -4138,8 +4138,8 @@ MonoBehaviour:
     type: 3}
   capLevel1: 250
   capLevel2: 1000
-  capLevel3: 5000
-  capLevel4: 12500
+  capLevel3: 4000
+  capLevel4: 10000
   startMenu: {fileID: 292478636}
 --- !u!1001 &373688609
 PrefabInstance:
@@ -12312,7 +12312,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyPoint: {fileID: 911836333}
-  debugAcorns: 50000000
 --- !u!4 &1190310099
 Transform:
   m_ObjectHideFlags: 0
