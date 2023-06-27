@@ -264,8 +264,7 @@ public class UIUpdater : MonoBehaviour
             EventManager.TriggerEvent("BoughtSquirrel", squirrel);
 
         GameManager.currentAcorns -= squirrelPrices[index] * squirrelQuantity[index];
-        squirrelPrices[index] += (int)(squirrelQuantity[index] * squirrelPrices[index])/2 + 
-                                 (int)Mathf.Log10(squirrelPrices[index] * squirrelPrices[index] + squirrelQuantity[index]);
+        squirrelPrices[index] += squirrelQuantity[index] * squirrelPrices[index];
         squirrelQuantity[index] = 1;
 
         foreach (Transform child in buyableSquirrels[index].transform)

@@ -50,7 +50,6 @@ public class Squirrel : MonoBehaviour
                 {
                     agent.destination = collider.transform.position;
                     StartCoroutine(FollowAcorn(collider.gameObject));
-                    StartCoroutine(FootSteps(collider.gameObject));
                     if (collider.transform.position.x < transform.position.x)
                     {
                         transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -74,16 +73,6 @@ public class Squirrel : MonoBehaviour
         }
         squirrelAnimator.SetBool("Walking", false);
         followingAcorn = false;
-    }
-
-    IEnumerator FootSteps(GameObject acorn)
-    {
-        while (acorn.activeInHierarchy)
-        {
-            source.clip = clips[Random.Range(0, clips.Length)];
-            source.Play();
-            yield return new WaitForSeconds(.05f);
-        }
     }
 
     private void OnDrawGizmos()
