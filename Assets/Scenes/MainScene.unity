@@ -4139,7 +4139,7 @@ MonoBehaviour:
   capLevel1: 250
   capLevel2: 1000
   capLevel3: 4000
-  capLevel4: 10000
+  capLevel4: 7500
   startMenu: {fileID: 292478636}
 --- !u!1001 &373688609
 PrefabInstance:
