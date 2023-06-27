@@ -12312,7 +12312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyPoint: {fileID: 911836333}
-  debugAcorns: 0
+  debugAcorns: 500000
 --- !u!4 &1190310099
 Transform:
   m_ObjectHideFlags: 0

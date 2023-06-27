@@ -6,7 +6,7 @@ public class LeafBehaviour : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] AudioClip[] audios;
-    private AudioSource source;
+    [SerializeField] AudioSource source;
 
     private void Start()
     {
