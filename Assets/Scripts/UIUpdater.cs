@@ -247,8 +247,8 @@ public class UIUpdater : MonoBehaviour
 
         if (buy != null)
         {
-            if(buy.onClick.GetPersistentEventCount() < 1)
-                buy.onClick.AddListener(delegate() { BoughtSquirrel(squirrelInfo, squirrelInfo.index - currentIndexSquirrels); });
+            buy.onClick.RemoveAllListeners();
+            buy.onClick.AddListener(delegate() { BoughtSquirrel(squirrelInfo, squirrelInfo.index - currentIndexSquirrels); });
         }
     }
 
@@ -262,7 +262,8 @@ public class UIUpdater : MonoBehaviour
             EventManager.TriggerEvent("BoughtSquirrel", squirrel);
 
         GameManager.currentAcorns -= squirrelPrices[index] * squirrelQuantity[index];
-        squirrelPrices[index] += (int)Mathf.Log10((squirrelPrices[index] + squirrelQuantity[index]) * 75f);
+        squirrelPrices[index] += (int)(squirrelQuantity[index] * squirrelPrices[index])/2 + 
+                                 (int)Mathf.Log10(squirrelPrices[index] * squirrelPrices[index] + squirrelQuantity[index]);
         squirrelQuantity[index] = 1;
 
         foreach (Transform child in buyableSquirrels[index].transform)
