@@ -73,7 +73,7 @@ public class UIUpdater : MonoBehaviour
 
     private void Update()
     {
-        if(PlayerInput._Instance.OnClick())
+        if(InputManager.Instance.OnClick())
         {
             CheckForMenus();
         }
@@ -271,7 +271,8 @@ public class UIUpdater : MonoBehaviour
         {
             if (child.name == "Quantity")
             {
-                child.GetComponent<TextMeshProUGUI>().text = squirrelQuantity[index].ToString();
+                if(child.GetComponent<TextMeshProUGUI>() != null)
+                    child.GetComponent<TextMeshProUGUI>().text = squirrelQuantity[index].ToString();
                 break;
             }
         }

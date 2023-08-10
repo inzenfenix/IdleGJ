@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -25,24 +26,29 @@ public class CameraBehaviour : MonoBehaviour
     {
         buyPoint.position = new Vector3(transform.position.x, buyPoint.position.y, buyPoint.position.z);
         //We use the singleton to check if we press the left button of our mouse
-        if (PlayerInput._Instance.OnClick())
+        if (InputManager.Instance.OnClick())
         {
-            //If we do we get the position of our mouse on screen
-            Vector2 mousePos = Mouse.current.position.ReadValue();
-            // create a hit which will tell us where the hit ended up in game space
+
+            Vector2 mousePos = InputManager.Instance.MousePositionInScreenPosition();
             RaycastHit hit;
-            //A ray using position of our mouse, we use this to look where we are pointing
             Ray ray = Camera.main.ScreenPointToRay(mousePos);
 
-            //If we hit something with the ray, we take OUT the information on hit
             if (Physics.Raycast(ray, out hit,10000, ~IgnoreMask))
             {
-                if(hit.transform.name == "Radio")
+                if (hit.transform.name == "Radio")
+                {
                     EventManager.TriggerEvent("ChangedVolume");
+                }
+
                 if (hit.transform.gameObject.tag == "Interactable")
                 {
-                    EventManager.TriggerEvent("Clicked", hit.transform.name);
+                    if(hit.transform.TryGetComponent<IInteractable>(out IInteractable interactable))
+                    {
+                        interactable.ClickInteraction();
+                    }
+
                 }
+
                 if(hit.transform.gameObject.tag == "Squirrel")
                 {
                     GrabSquirrel(hit.transform);
@@ -51,10 +57,10 @@ public class CameraBehaviour : MonoBehaviour
         }
         if (!pressingKey)
         {
-            if (PlayerInput._Instance.OnHoldA())
+            if (InputManager.Instance.OnHoldA())
                 StartCoroutine(MoveCameraWithKeyboard(-1, "A"));
 
-            if (PlayerInput._Instance.OnHoldD())
+            if (InputManager.Instance.OnHoldD())
                 StartCoroutine(MoveCameraWithKeyboard(1, "D"));
         }
 
@@ -74,7 +80,7 @@ public class CameraBehaviour : MonoBehaviour
         //squirrel.localScale *= 1.25f;
         Vector2 mousePos;
         Vector3 squirrelPos;
-        while (PlayerInput._Instance.OnHoldClick())
+        while (InputManager.Instance.OnHoldClick())
         {
             mousePos = Mouse.current.position.ReadValue();
             squirrelPos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -119,21 +125,21 @@ public class CameraBehaviour : MonoBehaviour
         yield return new WaitForSeconds(.05f);
         if (key == "A")
         {
-            pressing = PlayerInput._Instance.OnHoldA();
+            pressing = InputManager.Instance.OnHoldA();
             AKey.sprite = APressed;
         }
         else
         {
-            pressing = PlayerInput._Instance.OnHoldD();
+            pressing = InputManager.Instance.OnHoldD();
             DKey.sprite = DPressed;
         }
         
         while (pressing)
         {
             if (key == "A")
-                pressing = PlayerInput._Instance.OnHoldA();
+                pressing = InputManager.Instance.OnHoldA();
             else
-                pressing = PlayerInput._Instance.OnHoldD();
+                pressing = InputManager.Instance.OnHoldD();
             float nextMovement = movement * Time.deltaTime * speed * 1.5f;
             if (transform.position.x + nextMovement > -35.09f && transform.position.x + nextMovement < 37.59f)
                 transform.position = new Vector3(transform.position.x + nextMovement, transform.position.y, transform.position.z);

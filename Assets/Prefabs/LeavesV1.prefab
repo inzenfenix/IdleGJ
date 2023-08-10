@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 680561090927697579}
   - component: {fileID: 4017622612373258703}
-  - component: {fileID: -7858958058184393184}
   - component: {fileID: -2496960933648270655}
   - component: {fileID: -5101750995730089051}
   m_Layer: 11
@@ -61,26 +60,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-7858958058184393184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7220785642135239694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43c61b18fe4049548ad5c8e1acc41550, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 4017622612373258703}
-  audios:
-  - {fileID: 8300000, guid: 8318b2f26c3c87d4a9c799b15efb5af5, type: 3}
-  - {fileID: 8300000, guid: d4ad8d7b008a52b439b81b6be751ff8b, type: 3}
-  - {fileID: 8300000, guid: 1c888de245940e74695a4afb2ee2cbe8, type: 3}
-  - {fileID: 8300000, guid: f82050a7cebe8e0449aeb5eafd7d4372, type: 3}
-  - {fileID: 8300000, guid: 28d53e5bfbbe8e04f863d336eeb9dc68, type: 3}
-  source: {fileID: -1077675951837298077, guid: 943407c0bbbb4f5479c635f0575c0594, type: 3}
 --- !u!82 &-2496960933648270655
 AudioSource:
   m_ObjectHideFlags: 0

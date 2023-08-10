@@ -30,9 +30,9 @@ public class TreeSquirrel : MonoBehaviour
         if (!pickingAcorn)
         {
             Collider[] colliders = Physics.OverlapSphere(this.transform.position, radius, 1 << 11);
-            if(colliders.Length > 0)
-                if(!colliders[0].GetComponent<TreeGame>().spawning)
-                    StartCoroutine(PickedAcorn(colliders[0].name));
+            //if(colliders.Length > 0)
+                //if(!colliders[0].GetComponent<TreeUnit>().spawning)
+                    //StartCoroutine(PickedAcorn(colliders[0].name));
         }
     }
 

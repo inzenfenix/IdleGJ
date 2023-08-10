@@ -48,6 +48,5 @@ public class GameManager : MonoBehaviour
             EventManager.TriggerEvent("Achievement", "Congratulations! You got your first squirrel!");
         GameObject finalSquirrel = Instantiate(curSquirrel.squirrel, buyPoint.position, Quaternion.identity);
         finalSquirrel.GetComponent<SpriteRenderer>().color = curSquirrel.color;
-        GarbageCollector.CollectIncremental(1);
     }
 }
